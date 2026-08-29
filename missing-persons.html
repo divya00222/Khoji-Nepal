@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Missing Persons — Khoji Nepal</title>
+  <meta name="description" content="Search and browse verified missing persons records for the Rasuwa flood disaster." />
+  
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+<div class="app-container">
+  <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+  <!-- SIDEBAR -->
+  <aside id="app-sidebar" class="app-sidebar">
+    <a href="index.html" class="sidebar-logo">
+      <div class="logo-badge">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">Khoji Nepal</span>
+        <span class="logo-subtitle">Rasuwa Flood Response</span>
+      </div>
+    </a>
+
+    <nav style="flex-grow: 1;">
+      <ul class="sidebar-nav">
+        <li><a href="index.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span>Home</span></a></li>
+        <li><a href="missing-persons.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Find Missing Person</span></a></li>
+        <li><a href="rescue.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg><span>Rescue Tracker</span></a></li>
+        <li><a href="relief.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path></svg><span>Relief & Distribution</span></a></li>
+        <li><a href="map.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Live Map</span></a></li>
+        <li><a href="news.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path></svg><span>Government News</span></a></li>
+        <li><a href="report-missing.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m3 11 18-5v12L3 14v-3z"></path></svg><span>Report / Request Help</span></a></li>
+        <li><a href="family-reunion.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg><span>Family Reunion</span></a></li>
+        <li><a href="emergency.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>Emergency Contacts</span></a></li>
+        <li><a href="about.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg><span>About / Help</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-cta-group">
+      <div class="sidebar-cta-card emergency">
+        <div class="cta-header">
+          <svg class="cta-icon-alert" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+          <span class="cta-title">In Emergency?</span>
+        </div>
+        <button onclick="window.openRescueModal()" class="btn-sidebar-emergency">Request Rescue</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="app-main">
+    <header class="top-header">
+      <div style="display: flex; align-items: center;">
+        <button id="mobile-hamburger" class="mobile-hamburger-btn" aria-label="Toggle navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+        </button>
+        <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary-navy);">Find Missing Persons Directory</div>
+      </div>
+
+      <div class="top-actions">
+        <button onclick="window.triggerEmergencyCall()" class="btn-emergency-call">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>EMERGENCY CALL 112</span>
+        </button>
+        <div class="lang-selector-wrapper">
+          <button id="lang-toggle-btn" class="btn-lang-selector"><span id="current-lang-text">🇳🇵 EN</span></button>
+          <div id="lang-dropdown" class="lang-dropdown-menu">
+            <button onclick="window.setLanguage('en')" class="lang-option-btn">English (EN)</button>
+            <button onclick="window.setLanguage('ne')" class="lang-option-btn">नेपाली (NE)</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      
+      <!-- Top Action Banner -->
+      <div style="display: flex; justify-content: space-between; align-items: center; background: #ffffff; padding: 1.25rem 1.5rem; border-radius: var(--radius-xl); border: 1px solid var(--border-light); flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h1 style="font-size: 1.35rem; font-weight: 800; color: var(--primary-navy);">Missing Persons Central Registry</h1>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Cross-referenced with Nepal Police, Nepal Army, and DDMC Rasuwa field records.</p>
+        </div>
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="search-photo.html" class="btn-action-primary btn-green" style="width: auto; padding: 0 1.25rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <span>Search by Photo</span>
+          </a>
+          <a href="report-missing.html" class="btn-action-primary btn-orange" style="width: auto; padding: 0 1.25rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"></path></svg>
+            <span>Report Missing Person</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Filter Controls Bar -->
+      <div class="panel-card" style="padding: 1.25rem;">
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label">Search by Name or Keywords</label>
+            <input type="text" id="search-name-input" class="form-input" placeholder="Type name, village, or clothes..." />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Gender</label>
+            <select id="filter-gender" class="form-select">
+              <option value="all">All Genders</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Status</label>
+            <select id="filter-status" class="form-select">
+              <option value="all">All Statuses</option>
+              <option value="missing">Missing</option>
+              <option value="rescued">Rescued</option>
+              <option value="found">Found / Sheltered</option>
+              <option value="under verification">Under Verification</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Rasuwa Location</label>
+            <select id="filter-location" class="form-select">
+              <option value="all">All Locations</option>
+              <option value="Timure">Timure</option>
+              <option value="Syabrubesi">Syabrubesi</option>
+              <option value="Bhotekoshi">Bhotekoshi</option>
+              <option value="Gatlang">Gatlang</option>
+              <option value="Dhunche">Dhunche</option>
+              <option value="Langtang">Langtang Trail</option>
+            </select>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+          <span id="results-count" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">Showing records...</span>
+          <button onclick="document.getElementById('search-name-input').value=''; document.getElementById('filter-gender').value='all'; document.getElementById('filter-status').value='all'; document.getElementById('filter-location').value='all'; window.location.reload();" class="btn-secondary" style="font-size: 0.78rem;">Clear Filters</button>
+        </div>
+      </div>
+
+      <!-- Results Grid -->
+      <div id="missing-persons-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem;">
+        <!-- Rendered dynamically by js/search.js -->
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    </main>
+</div>
+
+<!-- Reusable Person Details Modal -->
+<div id="person-detail-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 class="modal-title">Missing Person File</h3>
+      <button class="modal-close-btn">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+        <img id="detail-person-img" src="" alt="Person" style="width: 110px; height: 110px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border-medium);" />
+        <div style="display: flex; flex-direction: column; gap: 0.35rem; flex-grow: 1;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <h2 id="detail-person-name" style="font-size: 1.25rem; font-weight: 800; color: var(--primary-navy);"></h2>
+            <span id="detail-person-status" class="badge-missing"></span>
+          </div>
+          <span id="detail-person-meta" style="font-size: 0.88rem; font-weight: 600; color: var(--text-muted);"></span>
+          <span style="font-size: 0.82rem; color: var(--text-subtle);">Last Location: <strong id="detail-person-loc"></strong></span>
+          <span style="font-size: 0.78rem; color: #94a3b8;">Missing Date: <span id="detail-person-date"></span></span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-subtle); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+        <h4 style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.35rem;">PHYSICAL DETAILS & LAST SEEN:</h4>
+        <p id="detail-person-desc" style="font-size: 0.85rem; color: var(--text-main); line-height: 1.4;"></p>
+      </div>
+
+      <div style="background: #eff6ff; padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid #bfdbfe;">
+        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gov-blue);">OFFICIAL INQUIRY CONTACT:</span>
+        <p id="detail-person-contact" style="font-size: 0.88rem; font-weight: 700; color: var(--primary-navy); margin-top: 0.2rem;"></p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn-secondary btn-modal-close">Close</button>
+      <button type="button" onclick="window.openSubmitInfoModal()" class="btn-action-primary btn-blue" style="width: auto; padding: 0 1.25rem;">
+        Report Sighting / Intel
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Sighting -->
+<div id="sighting-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 class="modal-title">Report Sighting of <span id="sighting-person-name"></span></h3>
+      <button class="modal-close-btn">✕</button>
+    </div>
+    <form id="sighting-form">
+      <input type="hidden" id="sighting-person-id" />
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Where did you see this person in Rasuwa? <span class="required">*</span></label>
+          <input type="text" id="sighting-location" class="form-input" placeholder="e.g. Syabrubesi shelter, near relief camp 2" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">When was the sighting? (Date & Approximate Time)</label>
+          <input type="text" class="form-input" placeholder="e.g. 29 Aug 2026, 8:00 AM" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Observed Condition / Details</label>
+          <textarea class="form-textarea" rows="2" placeholder="Describe physical state, clothes, who they were with..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Phone Number for Officer Follow-up <span class="required">*</span></label>
+          <input type="tel" id="sighting-phone" class="form-input" placeholder="98XXXXXXXX" required />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary btn-modal-close">Cancel</button>
+        <button type="submit" class="btn-action-primary btn-green" style="width: auto; padding: 0 1.5rem;">Submit Sighting</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/main.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/search.js"></script>
+<script src="js/ui.js"></script>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Emergency Contact Bar -->
+    <div class="footer-emergency-strip">
+      <div class="footer-emergency-content">
+        <div class="footer-emergency-icon">🚨</div>
+        <div>
+          <h4 class="footer-emergency-title">Need immediate rescue or emergency assistance?</h4>
+          <p class="footer-emergency-desc">24/7 National Disaster Response Command Center dispatch hotlines are active.</p>
+        </div>
+      </div>
+      <a href="emergency.html" class="footer-emergency-btn">
+        Emergency Contacts &rarr;
+      </a>
+    </div>
+
+    <!-- Main Footer Grid -->
+    <div class="footer-grid">
+      
+      <!-- Brand & Description -->
+      <div class="footer-brand-col">
+        <div class="footer-logo-wrap">
+          <span class="footer-flag">🇳🇵</span>
+          <div>
+            <h3>Khoji Nepal</h3>
+            <div class="footer-subtitle">खोजि नेपाल — Rasuwa Flood Platform</div>
+          </div>
+        </div>
+        <p class="footer-desc">
+          हराएका व्यक्तिको खोजी, उद्धार, राहत तथा आधिकारिक जानकारी एकै ठाउँमा उपलब्ध गराउने सूचना तथा समन्वय platform.
+        </p>
+        <div class="footer-trust-badge">
+          <span>✓</span> Information from verified/authorized sources
+        </div>
+      </div>
+
+      <!-- Column 1: Quick Links -->
+      <div class="footer-col" id="footer-col-quick">
+        <h4 onclick="toggleFooterAccordion('footer-col-quick')">Quick Links</h4>
+        <div class="footer-col-body">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="missing-persons.html">Find Missing Person</a></li>
+            <li><a href="search-photo.html">Search by Photo</a></li>
+            <li><a href="rescue.html">Rescue Tracker</a></li>
+            <li><a href="relief.html">Relief & Distribution</a></li>
+            <li><a href="map.html">Live Map</a></li>
+            <li><a href="government-news.html">Government News</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 2: Help & Report -->
+      <div class="footer-col" id="footer-col-help">
+        <h4 onclick="toggleFooterAccordion('footer-col-help')">Help & Report</h4>
+        <div class="footer-col-body">
+          <ul class="footer-links">
+            <li><a href="report-missing.html">Report Missing Person</a></li>
+            <li><a href="report-found.html">Report Found Person</a></li>
+            <li><a href="rescue.html">Request Rescue</a></li>
+            <li><a href="relief.html">Request Relief</a></li>
+            <li><a href="family-reunion.html">Family Reunion</a></li>
+            <li><a href="emergency.html">Emergency Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 3: Information -->
+      <div class="footer-col" id="footer-col-info">
+        <h4 onclick="toggleFooterAccordion('footer-col-info')">Information</h4>
+        <div class="footer-col-body">
+          <ul class="footer-links">
+            <li><a href="about.html">About Khoji Nepal</a></li>
+            <li><a href="about.html#how-it-works">How It Works</a></li>
+            <li><a href="about.html#data-sources">Data Sources</a></li>
+            <li><a href="about.html#verification">Verification Process</a></li>
+            <li><a href="about.html#privacy">Privacy Policy</a></li>
+            <li><a href="about.html#terms">Terms of Use</a></li>
+            <li><a href="about.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Official / Authorized Sources -->
+      <div class="footer-col" id="footer-col-sources">
+        <h4 onclick="toggleFooterAccordion('footer-col-sources')">Official Sources</h4>
+        <div class="footer-col-body">
+          <ul class="source-category-list">
+            <li class="source-category-item">
+              <span>Government of Nepal</span>
+              <a href="https://nepal.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>NDRRMA</span>
+              <a href="https://ndrrma.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Nepal Police</span>
+              <a href="https://nepalpolice.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Nepali Army</span>
+              <a href="https://nepalarmy.mil.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Armed Police Force</span>
+              <a href="https://apf.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>District Administration</span>
+              <a href="https://rasuwajd.moha.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Local Authorities</span>
+              <span style="font-size: 0.72rem; color: #94a3b8;">Verified</span>
+            </li>
+            <li class="source-category-item">
+              <span>Authorized NGOs</span>
+              <span style="font-size: 0.72rem; color: #94a3b8;">Accredited</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Data Disclaimer -->
+    <div class="footer-disclaimer-box">
+      <p>
+        <strong>Important Disclaimer:</strong> Information displayed on Khoji Nepal may change as rescue, identification and verification operations continue. AI-generated photo results are only possible matches and are not confirmation of identity. Please verify critical information with the relevant authority.
+      </p>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div>
+        &copy; 2026 Khoji Nepal. All rights reserved. &bull; <span id="footer-last-updated">Last Updated: Loading...</span>
+      </div>
+      
+      <ul class="footer-bottom-links">
+        <li><a href="about.html#privacy">Privacy</a></li>
+        <li><a href="about.html#terms">Terms</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+
+      <div class="footer-social-icons">
+        <a href="https://facebook.com/NepalPoliceOfficial" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="https://twitter.com/NepalPoliceHQ" target="_blank" rel="noopener" title="X / Twitter" aria-label="X / Twitter">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+        </a>
+        <a href="mailto:info@khoji.gov.np" title="Email" aria-label="Email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  function toggleFooterAccordion(colId) {
+    if (window.innerWidth <= 768) {
+      const col = document.getElementById(colId);
+      if (col) {
+        col.classList.toggle('active');
+      }
+    }
+  }
+
+  // Load last updated dynamically from dashboard stats or document timestamp
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('api/reports/dashboard.php')
+      .then(res => res.json())
+      .then(data => {
+        const el = document.getElementById('footer-last-updated');
+        if (el) {
+          const timeStr = data.last_updated || new Date().toLocaleString();
+          el.textContent = 'Last Updated: ' + timeStr;
+        }
+      })
+      .catch(() => {
+        const el = document.getElementById('footer-last-updated');
+        if (el) {
+          el.textContent = 'Last Updated: ' + new Date().toLocaleDateString();
+        }
+      });
+  });
+</script>
+
+</body>
+</html>

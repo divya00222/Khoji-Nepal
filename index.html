@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khoji Nepal — Rasuwa Flood Information & Response Platform</title>
+  <meta name="description" content="Centralized public-information portal for missing persons, rescue tracking, relief distribution, official updates, and emergency response for the Rasuwa flood." />
+  <meta property="og:title" content="Khoji Nepal — Rasuwa Flood Information & Response Platform" />
+  <meta property="og:description" content="Centralized public-information portal for missing persons, rescue tracking, relief distribution, official updates, and emergency response for the Rasuwa flood." />
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- Sidebar Backdrop for Mobile -->
+  <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+  <!-- 1. LEFT SIDEBAR NAVIGATION -->
+  <aside id="app-sidebar" class="app-sidebar">
+    <a href="index.html" class="sidebar-logo">
+      <div class="logo-badge">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+          <path d="M2 17l10 5 10-5"></path>
+          <path d="M2 12l10 5 10-5"></path>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">Khoji Nepal</span>
+        <span class="logo-subtitle">Rasuwa Flood Response</span>
+      </div>
+    </a>
+
+    <nav style="flex-grow: 1;">
+      <ul class="sidebar-nav">
+        <li>
+          <a href="index.html" class="nav-link active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="missing-persons.html" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Find Missing Person</span>
+          </a>
+        </li>
+        <li>
+          <a href="rescue.html" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path><circle cx="12" cy="12" r="4"></circle></svg>
+            <span>Rescue Tracker</span>
+          </a>
+        </li>
+        <li>
+          <a href="relief.html" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+            <span>Relief & Distribution</span>
+          </a>
+        </li>
+        <li>
+          <a href="map.html" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Live Map</span>
+          </a>
+        </li>
+        <li>
+          <a href="news.html" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8V6Z"></path></svg>
+            <span>Government News</span>
+          </a>
+        </li>
+        <li>
+          <a href="report-missing.html" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>
+            <span>Report / Request Help</span>
+          </a>
+        </li>
+        <li>
+          <a href="family-reunion.html" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <span>Family Reunion</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency.html" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Emergency Contacts</span>
+          </a>
+        </li>
+        <li>
+          <a href="about.html" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+            <span>About / Help</span>
+          </a>
+        </li>
+        <li>
+          <a href="admin.html" class="nav-link" style="color: #38bdf8; font-weight: 600;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Admin Console</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar Bottom Action Cards -->
+    <div class="sidebar-cta-group">
+      <!-- In Emergency -->
+      <div class="sidebar-cta-card emergency">
+        <div class="cta-header">
+          <svg class="cta-icon-alert" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span class="cta-title">In Emergency?</span>
+        </div>
+        <span class="cta-desc">Need immediate help?</span>
+        <button onclick="window.openRescueModal('Sidebar CTA')" class="btn-sidebar-emergency">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M2 12h20"/></svg>
+          <span>Request Rescue</span>
+        </button>
+      </div>
+
+      <!-- I Have Information -->
+      <div class="sidebar-cta-card info">
+        <div class="cta-header">
+          <svg class="cta-icon-info" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <span class="cta-title">I Have Information</span>
+        </div>
+        <span class="cta-desc">Share any information</span>
+        <button onclick="window.openSubmitInfoModal()" class="btn-sidebar-info">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <span>Submit Info</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. MAIN APPLICATION VIEW -->
+  <main class="app-main">
+
+    <!-- TOP HEADER BAR -->
+    <header class="top-header">
+      <div style="display: flex; align-items: center;">
+        <button id="mobile-hamburger" class="mobile-hamburger-btn" aria-label="Toggle navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+        </button>
+
+        <!-- Global Search -->
+        <form id="top-search-form" class="top-search-form">
+          <input type="text" class="top-search-input" placeholder="Search by name, location or keyword..." />
+          <button type="submit" class="top-search-btn" aria-label="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Top Right Actions -->
+      <div class="top-actions">
+        <!-- Emergency Call 112 -->
+        <button onclick="window.triggerEmergencyCall()" class="btn-emergency-call">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>EMERGENCY CALL 112</span>
+        </button>
+
+        <!-- Notification Bell -->
+        <button id="notif-btn" class="btn-notification" aria-label="Notifications">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+          <span class="notification-badge">5</span>
+        </button>
+
+        <!-- Language Selector -->
+        <div class="lang-selector-wrapper">
+          <button id="lang-toggle-btn" class="btn-lang-selector">
+            <span id="current-lang-text">🇳🇵 EN</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div id="lang-dropdown" class="lang-dropdown-menu">
+            <button onclick="window.setLanguage('en')" class="lang-option-btn">
+              <span>English (EN)</span>
+            </button>
+            <button onclick="window.setLanguage('ne')" class="lang-option-btn">
+              <span>नेपाली (Nepali)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="content-wrapper">
+      
+      <!-- Demo Data Banner for Phase 1 Notice -->
+      <div class="demo-banner">
+        <div><span class="demo-tag">Phase 1 Demo</span> Real-time verified humanitarian portal simulation. All sample names, locations & stats are for development verification.</div>
+        <span style="font-size: 0.75rem; font-weight: 600;">Rasuwa District Disaster Command</span>
+      </div>
+
+      <div class="homepage-grid">
+        
+        <!-- LEFT / MAIN FLOW (Hero + 3 Actions + Stats + Map + Relief Centers) -->
+        <div class="main-column">
+
+          <!-- 1. HERO SECTION -->
+          <section class="hero-card">
+            <div class="hero-content">
+              <span class="hero-tag">Rasuwa Flood</span>
+              <h1 class="hero-title">Information & Response Platform</h1>
+              <p class="hero-nepali-text">हराएका व्यक्तिको खोजी, उद्धार, राहत र सरकारी जानकारी एकै ठाउँमा</p>
+              
+              <div class="hero-badges-row">
+                <div class="hero-badge verified">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Data verified by Government</span>
+                </div>
+                <div class="hero-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Last Updated: 29 Aug 2026, 10:45 AM</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 2. THREE MAJOR ACTION CARDS -->
+          <section class="action-cards-grid">
+            
+            <!-- Card 1: Find Missing Person -->
+            <div class="action-card search-name">
+              <div class="action-card-header">
+                <div class="action-icon-badge">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+                <div class="action-card-titles">
+                  <h3 class="action-card-title">Find Missing Person</h3>
+                  <span class="action-card-sub">Search by name or details</span>
+                </div>
+              </div>
+              
+              <div class="action-card-body">
+                <div class="input-with-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <input type="text" id="home-name-search-input" class="action-input" placeholder="Enter name, age, location..." />
+                </div>
+                <button onclick="const val = document.getElementById('home-name-search-input').value; window.location.href = 'missing-persons.html' + (val ? '?q=' + encodeURIComponent(val) : '');" class="btn-action-primary btn-blue">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Search by Name</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 2: Search by Photo -->
+            <div class="action-card search-photo">
+              <div class="action-card-header">
+                <div class="action-icon-badge">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                </div>
+                <div class="action-card-titles">
+                  <h3 class="action-card-title">Search by Photo</h3>
+                  <span class="action-card-sub">Upload photo to find possible matches</span>
+                </div>
+              </div>
+
+              <div class="action-card-body">
+                <div onclick="window.location.href='search-photo.html'" class="photo-dropzone">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path><path d="M12 12v9"></path><path d="m16 16-4-4-4 4"></path></svg>
+                  <span class="dropzone-text">Click to upload or drag & drop</span>
+                  <span class="dropzone-hint">JPG, PNG (Max 5MB)</span>
+                </div>
+                <a href="search-photo.html" class="btn-action-primary btn-green">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                  <span>Upload Photo</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3: Report Missing Person -->
+            <div class="action-card report">
+              <div class="action-card-header">
+                <div class="action-icon-badge">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <div class="action-card-titles">
+                  <h3 class="action-card-title">Report Missing Person</h3>
+                  <span class="action-card-sub">Help us by reporting details</span>
+                </div>
+              </div>
+
+              <div class="action-card-body">
+                <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.5rem;">
+                  Submit records for lost loved ones with photos and last known checkpoints.
+                </p>
+                <a href="report-missing.html" class="btn-action-primary btn-orange">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                  <span>Report Now</span>
+                </a>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- 3. OVERVIEW SECTION (5 Statistics Cards) -->
+          <section>
+            <div class="section-header">
+              <h2 class="section-title">
+                <span>Rasuwa Flood - Overview</span>
+                <span class="live-indicator"><span class="live-dot"></span> Live Data</span>
+              </h2>
+            </div>
+
+            <div class="stats-cards-row">
+              <!-- Missing Persons -->
+              <div class="stat-card">
+                <div class="stat-header">
+                  <div class="stat-icon-wrapper missing">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                  </div>
+                  <span class="stat-label">Missing Persons</span>
+                </div>
+                <div class="stat-value">1,248</div>
+                <a href="missing-persons.html" class="stat-footer-link">
+                  <span>View Details</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- Rescued People -->
+              <div class="stat-card">
+                <div class="stat-header">
+                  <div class="stat-icon-wrapper rescued">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  </div>
+                  <span class="stat-label">Rescued People</span>
+                </div>
+                <div class="stat-value">3,521</div>
+                <a href="rescue.html" class="stat-footer-link">
+                  <span>View Details</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- Relief Centers -->
+              <div class="stat-card">
+                <div class="stat-header">
+                  <div class="stat-icon-wrapper relief">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                  </div>
+                  <span class="stat-label">Relief Centers</span>
+                </div>
+                <div class="stat-value">86</div>
+                <a href="relief.html" class="stat-footer-link">
+                  <span>View Details</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- Active Requests -->
+              <div class="stat-card">
+                <div class="stat-header">
+                  <div class="stat-icon-wrapper requests">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  </div>
+                  <span class="stat-label">Active Requests</span>
+                </div>
+                <div class="stat-value">157</div>
+                <a href="rescue.html" class="stat-footer-link">
+                  <span>View Details</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- Deceased Confirmed -->
+              <div class="stat-card">
+                <div class="stat-header">
+                  <div class="stat-icon-wrapper deceased">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="7" r="4"></circle><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path><line x1="18" y1="6" x2="22" y2="10"></line><line x1="22" y1="6" x2="18" y2="10"></line></svg>
+                  </div>
+                  <span class="stat-label">Deceased Confirmed</span>
+                </div>
+                <div class="stat-value">278</div>
+                <a href="missing-persons.html" class="stat-footer-link">
+                  <span>View Details</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 4. LOWER GRID: LIVE MAP & RELIEF CENTERS -->
+          <div class="lower-grid">
+            
+            <!-- Live Rescue & Relief Map -->
+            <div class="panel-card">
+              <div class="section-header">
+                <h3 class="section-title">
+                  <span>Live Rescue & Relief Map</span>
+                  <span class="live-indicator"><span class="live-dot"></span> Live</span>
+                </h3>
+              </div>
+
+              <!-- Interactive Map Box -->
+              <div class="map-container">
+                <div class="map-controls-group">
+                  <button id="map-zoom-in" class="map-ctrl-btn" title="Zoom In">+</button>
+                  <button id="map-zoom-out" class="map-ctrl-btn" title="Zoom Out">−</button>
+                </div>
+
+                <div id="map-canvas" class="map-canvas-visual">
+                  <!-- Graphical River & Valley Terrain SVG -->
+                  <svg class="map-bg-svg" viewBox="0 0 500 300" preserveAspectRatio="none">
+                    <!-- Mountain Ridges -->
+                    <path d="M0,150 Q120,40 240,110 T500,80 L500,300 L0,300 Z" fill="#b9c7d8" opacity="0.4"></path>
+                    <path d="M0,200 Q150,110 300,180 T500,160 L500,300 L0,300 Z" fill="#9fb1c7" opacity="0.5"></path>
+                    <!-- Flooded River Trishuli / Bhote Koshi -->
+                    <path d="M120,0 Q140,80 180,140 T320,240 T480,300" fill="none" stroke="#60a5fa" stroke-width="12" stroke-linecap="round" opacity="0.85"></path>
+                    <path d="M120,0 Q140,80 180,140 T320,240 T480,300" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-dasharray="6,4"></path>
+                  </svg>
+                </div>
+
+                <!-- Legend Bar -->
+                <div class="map-legend-bar">
+                  <div class="legend-item">
+                    <span class="legend-dot missing"></span>
+                    <span>Missing</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-dot rescued"></span>
+                    <span>Rescued</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-dot hospital"></span>
+                    <span>Hospital</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-dot relief"></span>
+                    <span>Relief Center</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-dot shelter"></span>
+                    <span>Shelter</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-dot helipad"></span>
+                    <span>Heli Pad</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Relief Distribution Centers -->
+            <div class="panel-card">
+              <div class="section-header">
+                <h3 class="section-title">Relief Distribution Centers</h3>
+                <a href="relief.html" class="section-link">
+                  <span>View All</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <div class="relief-list">
+                <!-- Center 1 -->
+                <div class="relief-item-card">
+                  <div class="relief-item-left">
+                    <div class="relief-icon-box green">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                    </div>
+                    <div class="relief-info">
+                      <h4 class="relief-name">Syabrubesi Relief Center</h4>
+                      <span class="relief-location">Syabrubesi, Rasuwa</span>
+                      <span class="relief-supplies">Food, Water, Medicine</span>
+                    </div>
+                  </div>
+                  <div class="relief-item-right">
+                    <span class="status-badge available">Available</span>
+                    <span class="relief-distance">📍 2.3 km</span>
+                  </div>
+                </div>
+
+                <!-- Center 2 -->
+                <div class="relief-item-card">
+                  <div class="relief-item-left">
+                    <div class="relief-icon-box orange">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <div class="relief-info">
+                      <h4 class="relief-name">Timure Relief Point</h4>
+                      <span class="relief-location">Timure, Rasuwa</span>
+                      <span class="relief-supplies">Food, Water, Blankets</span>
+                    </div>
+                  </div>
+                  <div class="relief-item-right">
+                    <span class="status-badge limited">Limited</span>
+                    <span class="relief-distance">📍 5.7 km</span>
+                  </div>
+                </div>
+
+                <!-- Center 3 -->
+                <div class="relief-item-card">
+                  <div class="relief-item-left">
+                    <div class="relief-icon-box">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path></svg>
+                    </div>
+                    <div class="relief-info">
+                      <h4 class="relief-name">Bhotekoshi Relief Camp</h4>
+                      <span class="relief-location">Bhotekoshi, Rasuwa</span>
+                      <span class="relief-supplies">Food, Water, Medicine</span>
+                    </div>
+                  </div>
+                  <div class="relief-item-right">
+                    <span class="status-badge available">Available</span>
+                    <span class="relief-distance">📍 8.9 km</span>
+                  </div>
+                </div>
+              </div>
+
+              <a href="relief.html" style="text-align: center; font-size: 0.82rem; font-weight: 700; color: var(--gov-blue); margin-top: auto; padding-top: 0.5rem; display: block;">
+                All Relief Centers →
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: OFFICIAL UPDATES, MISSING PERSONS, EMERGENCY NUMBERS -->
+        <div class="right-column">
+          
+          <!-- 1. OFFICIAL GOVERNMENT UPDATES -->
+          <div class="right-panel-card">
+            <div class="section-header">
+              <h3 class="section-title" style="font-size: 1.05rem;">Official Government Updates</h3>
+              <a href="news.html" class="section-link">View All</a>
+            </div>
+
+            <div class="updates-list">
+              <!-- Item 1: Nepal Govt -->
+              <div class="update-item">
+                <div class="update-emblem">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Emblem_of_Nepal.svg/200px-Emblem_of_Nepal.svg.png" alt="Emblem of Nepal" />
+                </div>
+                <div class="update-body">
+                  <div class="update-meta">
+                    <span class="update-source">Government of Nepal</span>
+                    <span class="update-date">29 Aug 2026, 10:30 AM</span>
+                    <span class="badge-new">NEW</span>
+                  </div>
+                  <p class="update-desc">Search and rescue operations continue in Rasuwa district. Helicopters deployed.</p>
+                </div>
+              </div>
+
+              <!-- Item 2: NDRRMA -->
+              <div class="update-item">
+                <div class="update-emblem">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Emblem_of_Nepal.svg/200px-Emblem_of_Nepal.svg.png" alt="NDRRMA Emblem" />
+                </div>
+                <div class="update-body">
+                  <div class="update-meta">
+                    <span class="update-source">NDRRMA</span>
+                    <span class="update-date">29 Aug 2026, 09:45 AM</span>
+                    <span class="badge-new">NEW</span>
+                  </div>
+                  <p class="update-desc">Relief distribution is ongoing in affected areas. More teams mobilized.</p>
+                </div>
+              </div>
+
+              <!-- Item 3: Nepal Police -->
+              <div class="update-item">
+                <div class="update-emblem">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Emblem_of_Nepal.svg/200px-Emblem_of_Nepal.svg.png" alt="Nepal Police Emblem" />
+                </div>
+                <div class="update-body">
+                  <div class="update-meta">
+                    <span class="update-source">Nepal Police</span>
+                    <span class="update-date">29 Aug 2026, 09:20 AM</span>
+                  </div>
+                  <p class="update-desc">Information regarding missing persons please contact local police stations.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="news.html" style="text-align: center; font-size: 0.82rem; font-weight: 700; color: var(--gov-blue); padding-top: 0.5rem; display: block;">
+              All Official Updates →
+            </a>
+          </div>
+
+          <!-- 2. RECENT MISSING PERSONS -->
+          <div class="right-panel-card">
+            <div class="section-header">
+              <h3 class="section-title" style="font-size: 1.05rem;">Recent Missing Persons</h3>
+              <a href="missing-persons.html" class="section-link">View All</a>
+            </div>
+
+            <div class="missing-mini-list">
+              <!-- Person 1 -->
+              <div onclick="window.openPersonDetails('MP-2026-001')" class="missing-mini-card" style="cursor: pointer;">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Suvas Phuyal" class="missing-avatar" />
+                <div class="missing-mini-info">
+                  <div class="missing-name-row">
+                    <span class="missing-name">Suvas Phuyal</span>
+                    <span class="badge-missing">Missing</span>
+                  </div>
+                  <span class="missing-meta">Age: 27 • Male</span>
+                  <span class="missing-loc">📍 Timure, Rasuwa</span>
+                  <span style="font-size: 0.68rem; color: #94a3b8;">Missing since 28 Aug 2026</span>
+                </div>
+              </div>
+
+              <!-- Person 2 -->
+              <div onclick="window.openPersonDetails('MP-2026-002')" class="missing-mini-card" style="cursor: pointer;">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Sushmita Kunwar" class="missing-avatar" />
+                <div class="missing-mini-info">
+                  <div class="missing-name-row">
+                    <span class="missing-name">Sushmita Kunwar</span>
+                    <span class="badge-missing">Missing</span>
+                  </div>
+                  <span class="missing-meta">Age: 23 • Female</span>
+                  <span class="missing-loc">📍 Syabrubesi, Rasuwa</span>
+                  <span style="font-size: 0.68rem; color: #94a3b8;">Missing since 28 Aug 2026</span>
+                </div>
+              </div>
+
+              <!-- Person 3 -->
+              <div onclick="window.openPersonDetails('MP-2026-003')" class="missing-mini-card" style="cursor: pointer;">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Subindra Nepali" class="missing-avatar" />
+                <div class="missing-mini-info">
+                  <div class="missing-name-row">
+                    <span class="missing-name">Subindra Nepali</span>
+                    <span class="badge-missing">Missing</span>
+                  </div>
+                  <span class="missing-meta">Age: 31 • Male</span>
+                  <span class="missing-loc">📍 Bhotekoshi, Rasuwa</span>
+                  <span style="font-size: 0.68rem; color: #94a3b8;">Missing since 27 Aug 2026</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="missing-persons.html" style="text-align: center; font-size: 0.82rem; font-weight: 700; color: var(--gov-blue); padding-top: 0.5rem; display: block;">
+              All Missing Persons →
+            </a>
+          </div>
+
+          <!-- 3. EMERGENCY CONTACTS -->
+          <div class="right-panel-card">
+            <div class="section-header">
+              <h3 class="section-title" style="font-size: 1.05rem; color: var(--emergency-red);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>Emergency Contacts</span>
+              </h3>
+            </div>
+
+            <div class="emergency-contacts-list">
+              <!-- Nepal Police -->
+              <a href="tel:100" class="emergency-contact-item">
+                <div class="contact-left">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <span class="contact-agency">Nepal Police</span>
+                </div>
+                <span class="contact-number">100</span>
+              </a>
+
+              <!-- Armed Police Force -->
+              <a href="tel:103" class="emergency-contact-item">
+                <div class="contact-left">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <span class="contact-agency">Armed Police Force</span>
+                </div>
+                <span class="contact-number">103</span>
+              </a>
+
+              <!-- Nepali Army -->
+              <a href="tel:101" class="emergency-contact-item">
+                <div class="contact-left">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+                  <span class="contact-agency">Nepal Army</span>
+                </div>
+                <span class="contact-number">101</span>
+              </a>
+
+              <!-- Health Emergency -->
+              <a href="tel:102" class="emergency-contact-item">
+                <div class="contact-left">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                  <span class="contact-agency">Health Emergency</span>
+                </div>
+                <span class="contact-number">102</span>
+              </a>
+            </div>
+
+            <a href="emergency.html" style="text-align: center; font-size: 0.82rem; font-weight: 700; color: var(--emergency-red); padding-top: 0.5rem; display: block;">
+              View All Contacts →
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    </main>
+</div>
+
+<!-- MOBILE BOTTOM NAVIGATION -->
+<nav class="mobile-bottom-nav">
+  <a href="index.html" class="mobile-nav-item active">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+    <span>Home</span>
+  </a>
+  <a href="missing-persons.html" class="mobile-nav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    <span>Search</span>
+  </a>
+  <a href="javascript:void(0)" onclick="window.openRescueModal('Mobile FAB')" class="mobile-nav-item emergency-fab" title="Emergency Rescue">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+  </a>
+  <a href="report-missing.html" class="mobile-nav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+    <span>Report</span>
+  </a>
+  <a href="news.html" class="mobile-nav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path></svg>
+    <span>Alerts</span>
+  </a>
+</nav>
+
+<!-- 3. MODALS & POPUPS -->
+
+<!-- MODAL: REQUEST RESCUE -->
+<div id="rescue-request-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 class="modal-title" style="color: var(--emergency-red);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+        <span>Emergency Rescue Dispatch Request</span>
+      </h3>
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+    </div>
+    <form id="rescue-form">
+      <input type="hidden" id="rescue-source" value="" />
+      <div class="modal-body">
+        <p style="font-size: 0.84rem; color: #b91c1c; background: #fff1f2; padding: 0.75rem; border-radius: 8px; border: 1px solid #fecdd3;">
+          ⚠️ <strong>Immediate Danger?</strong> If you have mobile connectivity, also dial <strong>112</strong> or <strong>100</strong> immediately.
+        </p>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label">Full Name / Informant <span class="required">*</span></label>
+            <input type="text" id="rescue-name" class="form-input" placeholder="e.g. Pemba Tamang" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Contact Phone <span class="required">*</span></label>
+            <input type="tel" id="rescue-phone" class="form-input" placeholder="e.g. 98XXXXXXXX" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Exact Location in Rasuwa <span class="required">*</span></label>
+          <input type="text" id="rescue-location" class="form-input" placeholder="e.g. Near Timure bridge, behind customs office" required />
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label">Number of Trapped Persons</label>
+            <input type="number" id="rescue-count" class="form-input" value="1" min="1" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Critical Situation</label>
+            <select id="rescue-condition" class="form-select">
+              <option value="rising_water">Rising Water / Flooding</option>
+              <option value="landslide">Landslide Debris Active</option>
+              <option value="medical">Severe Medical Emergency</option>
+              <option value="elderly_infant">Elderly / Infant Trapped</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Additional Landmarks / GPS description</label>
+          <textarea id="rescue-notes" class="form-textarea" rows="2" placeholder="Describe roof, color of house, surrounding terrain..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary btn-modal-close">Cancel</button>
+        <button type="submit" class="btn-action-primary btn-orange" style="background-color: var(--emergency-red); width: auto; padding: 0 1.5rem;">
+          🚨 Dispatch Emergency SOS
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL: SUBMIT INFO / INTEL -->
+<div id="submit-info-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 class="modal-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+        <span>Submit Ground Intel & Sightings</span>
+      </h3>
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+    </div>
+    <form id="intel-form" onsubmit="event.preventDefault(); window.closeAllModals(); window.showToast('Intel received. Thank you for aiding humanitarian response.', 'success');">
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Category of Information</label>
+          <select class="form-select">
+            <option>Sighting of Stranded Persons</option>
+            <option>Blocked Road / Bridge Damage</option>
+            <option>Safe Shelter Available</option>
+            <option>Emergency Supply Shortage</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Location / Ward in Rasuwa</label>
+          <input type="text" class="form-input" placeholder="e.g. Syabrubesi Ward 3" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Detailed Notes</label>
+          <textarea class="form-textarea" rows="3" placeholder="Provide accurate names, times, vehicle plate numbers or conditions..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Contact Phone (Optional)</label>
+          <input type="tel" class="form-input" placeholder="98XXXXXXXX" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary btn-modal-close">Cancel</button>
+        <button type="submit" class="btn-action-primary btn-blue" style="width: auto; padding: 0 1.5rem;">Submit Information</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL: PERSON DETAILS -->
+<div id="person-detail-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 class="modal-title">Missing Person File</h3>
+      <button class="modal-close-btn">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+        <img id="detail-person-img" src="" alt="Person" style="width: 110px; height: 110px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border-medium);" />
+        <div style="display: flex; flex-direction: column; gap: 0.35rem; flex-grow: 1;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <h2 id="detail-person-name" style="font-size: 1.25rem; font-weight: 800; color: var(--primary-navy);"></h2>
+            <span id="detail-person-status" class="badge-missing"></span>
+          </div>
+          <span id="detail-person-meta" style="font-size: 0.88rem; font-weight: 600; color: var(--text-muted);"></span>
+          <span style="font-size: 0.82rem; color: var(--text-subtle);">Last Location: <strong id="detail-person-loc"></strong></span>
+          <span style="font-size: 0.78rem; color: #94a3b8;">Missing Date: <span id="detail-person-date"></span></span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-subtle); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+        <h4 style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.35rem;">PHYSICAL DETAILS & LAST SEEN:</h4>
+        <p id="detail-person-desc" style="font-size: 0.85rem; color: var(--text-main); line-height: 1.4;"></p>
+      </div>
+
+      <div style="background: #eff6ff; padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid #bfdbfe;">
+        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gov-blue);">OFFICIAL INQUIRY CONTACT:</span>
+        <p id="detail-person-contact" style="font-size: 0.88rem; font-weight: 700; color: var(--primary-navy); margin-top: 0.2rem;"></p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn-secondary btn-modal-close">Close</button>
+      <button type="button" onclick="window.openSubmitInfoModal()" class="btn-action-primary btn-blue" style="width: auto; padding: 0 1.25rem;">
+        Report Sighting / Intel
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- NOTIFICATION DRAWER -->
+<div id="notif-drawer" class="notification-drawer">
+  <div class="notification-header">
+    <strong style="font-size: 0.95rem; color: var(--primary-navy);">Emergency Broadcasts</strong>
+    <span class="badge-new">5 Active</span>
+  </div>
+  <div class="notification-body">
+    <div class="notification-item unread">
+      <div style="color: var(--emergency-red);">🚨</div>
+      <div>
+        <strong style="font-size: 0.82rem; color: var(--primary-navy);">Timure Flash Flood Alert</strong>
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Upper river bank residents requested to move to highland shelters.</p>
+        <span style="font-size: 0.68rem; color: #94a3b8;">15 mins ago</span>
+      </div>
+    </div>
+    <div class="notification-item unread">
+      <div style="color: var(--gov-blue);">🚁</div>
+      <div>
+        <strong style="font-size: 0.82rem; color: var(--primary-navy);">Army MI-17 Airlift Operational</strong>
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">2nd air-rescue sortie landed at Dhunche military grounds.</p>
+        <span style="font-size: 0.68rem; color: #94a3b8;">45 mins ago</span>
+      </div>
+    </div>
+    <div class="notification-item">
+      <div style="color: var(--rescue-green);">📦</div>
+      <div>
+        <strong style="font-size: 0.82rem; color: var(--primary-navy);">Syabrubesi Relief Supplies Restocked</strong>
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">500 food kits and water purifiers available at center.</p>
+        <span style="font-size: 0.68rem; color: #94a3b8;">2 hours ago</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS (Vanilla JS Only) -->
+<script src="js/main.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/search.js"></script>
+<script src="js/map.js"></script>
+<script src="js/ui.js"></script>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Emergency Contact Bar -->
+    <div class="footer-emergency-strip">
+      <div class="footer-emergency-content">
+        <div class="footer-emergency-icon">🚨</div>
+        <div>
+          <h4 class="footer-emergency-title">Need immediate rescue or emergency assistance?</h4>
+          <p class="footer-emergency-desc">24/7 National Disaster Response Command Center dispatch hotlines are active.</p>
+        </div>
+      </div>
+      <a href="emergency.html" class="footer-emergency-btn">
+        Emergency Contacts &rarr;
+      </a>
+    </div>
+
+    <!-- Main Footer Grid -->
+    <div class="footer-grid">
+      
+      <!-- Brand & Description -->
+      <div class="footer-brand-col">
+        <div class="footer-logo-wrap">
+          <span class="footer-flag">🇳🇵</span>
+          <div>
+            <h3>Khoji Nepal</h3>
+            <div class="footer-subtitle">खोजि नेपाल — Rasuwa Flood Platform</div>
+          </div>
+        </div>
+        <p class="footer-desc">
+          हराएका व्यक्तिको खोजी, उद्धार, राहत तथा आधिकारिक जानकारी एकै ठाउँमा उपलब्ध गराउने सूचना तथा समन्वय platform.
+        </p>
+        <div class="footer-trust-badge">
+          <span>✓</span> Information from verified/authorized sources
+        </div>
+      </div>
+
+      <!-- Column 1: Quick Links -->
+      <div class="footer-col" id="footer-col-quick">
+        <h4 onclick="toggleFooterAccordion('footer-col-quick')">Quick Links</h4>
+        <div class="footer-col-body">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="missing-persons.html">Find Missing Person</a></li>
+            <li><a href="search-photo.html">Search by Photo</a></li>
+            <li><a href="rescue.html">Rescue Tracker</a></li>
+            <li><a href="relief.html">Relief & Distribution</a></li>
+            <li><a href="map.html">Live Map</a></li>
+            <li><a href="government-news.html">Government News</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 2: Help & Report -->
+      <div class="footer-col" id="footer-col-help">
+        <h4 onclick="toggleFooterAccordion('footer-col-help')">Help & Report</h4>
+        <div class="footer-col-body">
+          <ul class="footer-links">
+            <li><a href="report-missing.html">Report Missing Person</a></li>
+            <li><a href="report-found.html">Report Found Person</a></li>
+            <li><a href="rescue.html">Request Rescue</a></li>
+            <li><a href="relief.html">Request Relief</a></li>
+            <li><a href="family-reunion.html">Family Reunion</a></li>
+            <li><a href="emergency.html">Emergency Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 3: Information -->
+      <div class="footer-col" id="footer-col-info">
+        <h4 onclick="toggleFooterAccordion('footer-col-info')">Information</h4>
+        <div class="footer-col-body">
+          <ul class="footer-links">
+            <li><a href="about.html">About Khoji Nepal</a></li>
+            <li><a href="about.html#how-it-works">How It Works</a></li>
+            <li><a href="about.html#data-sources">Data Sources</a></li>
+            <li><a href="about.html#verification">Verification Process</a></li>
+            <li><a href="about.html#privacy">Privacy Policy</a></li>
+            <li><a href="about.html#terms">Terms of Use</a></li>
+            <li><a href="about.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Official / Authorized Sources -->
+      <div class="footer-col" id="footer-col-sources">
+        <h4 onclick="toggleFooterAccordion('footer-col-sources')">Official Sources</h4>
+        <div class="footer-col-body">
+          <ul class="source-category-list">
+            <li class="source-category-item">
+              <span>Government of Nepal</span>
+              <a href="https://nepal.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>NDRRMA</span>
+              <a href="https://ndrrma.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Nepal Police</span>
+              <a href="https://nepalpolice.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Nepali Army</span>
+              <a href="https://nepalarmy.mil.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Armed Police Force</span>
+              <a href="https://apf.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>District Administration</span>
+              <a href="https://rasuwajd.moha.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Local Authorities</span>
+              <span style="font-size: 0.72rem; color: #94a3b8;">Verified</span>
+            </li>
+            <li class="source-category-item">
+              <span>Authorized NGOs</span>
+              <span style="font-size: 0.72rem; color: #94a3b8;">Accredited</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Data Disclaimer -->
+    <div class="footer-disclaimer-box">
+      <p>
+        <strong>Important Disclaimer:</strong> Information displayed on Khoji Nepal may change as rescue, identification and verification operations continue. AI-generated photo results are only possible matches and are not confirmation of identity. Please verify critical information with the relevant authority.
+      </p>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div>
+        &copy; 2026 Khoji Nepal. All rights reserved. &bull; <span id="footer-last-updated">Last Updated: Loading...</span>
+      </div>
+      
+      <ul class="footer-bottom-links">
+        <li><a href="about.html#privacy">Privacy</a></li>
+        <li><a href="about.html#terms">Terms</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+
+      <div class="footer-social-icons">
+        <a href="https://facebook.com/NepalPoliceOfficial" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="https://twitter.com/NepalPoliceHQ" target="_blank" rel="noopener" title="X / Twitter" aria-label="X / Twitter">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+        </a>
+        <a href="mailto:info@khoji.gov.np" title="Email" aria-label="Email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  function toggleFooterAccordion(colId) {
+    if (window.innerWidth <= 768) {
+      const col = document.getElementById(colId);
+      if (col) {
+        col.classList.toggle('active');
+      }
+    }
+  }
+
+  // Load last updated dynamically from dashboard stats or document timestamp
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('api/reports/dashboard.php')
+      .then(res => res.json())
+      .then(data => {
+        const el = document.getElementById('footer-last-updated');
+        if (el) {
+          const timeStr = data.last_updated || new Date().toLocaleString();
+          el.textContent = 'Last Updated: ' + timeStr;
+        }
+      })
+      .catch(() => {
+        const el = document.getElementById('footer-last-updated');
+        if (el) {
+          el.textContent = 'Last Updated: ' + new Date().toLocaleDateString();
+        }
+      });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+/* ==========================================================================
+   KHOJI NEPAL — Responsive Stylesheet (Vanilla CSS3)
+   ========================================================================== */
+
+/* Mobile Bottom Navigation Bar */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  padding: 0.4rem 0.75rem calc(0.4rem + env(safe-area-inset-bottom, 0px)) 0.75rem;
+  z-index: 50;
+  box-shadow: 0 -4px 12px rgba(15, 23, 42, 0.06);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  color: var(--text-subtle);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-md);
+  transition: color var(--transition-fast);
+}
+
+.mobile-nav-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+.mobile-nav-item.active {
+  color: var(--gov-blue);
+}
+
+.mobile-nav-item.emergency-fab {
+  background-color: var(--emergency-red);
+  color: #ffffff;
+  border-radius: var(--radius-full);
+  padding: 0.5rem;
+  margin-top: -16px;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35);
+}
+
+.mobile-nav-item.emergency-fab svg {
+  color: #ffffff;
+  width: 22px;
+  height: 22px;
+}
+
+.mobile-hamburger-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  color: var(--text-main);
+  margin-right: 0.5rem;
+}
+
+/* Sidebar Overlay on Mobile */
+.sidebar-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 39;
+}
+
+/* Breakpoint: Large Screens (< 1280px) */
+@media (max-width: 1280px) {
+  .homepage-grid {
+    grid-template-columns: 1fr 310px;
+    gap: 1.25rem;
+  }
+
+  .stats-cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Breakpoint: Tablets (< 1024px) */
+@media (max-width: 1024px) {
+  .homepage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .action-card.report {
+    grid-column: span 2;
+  }
+
+  .lower-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Breakpoint: Mobile (< 768px) */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 280px;
+  }
+
+  .app-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .app-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-backdrop.show {
+    display: block;
+  }
+
+  .mobile-hamburger-btn {
+    display: flex;
+  }
+
+  .app-main {
+    margin-left: 0;
+    padding-bottom: 72px; /* For bottom nav */
+  }
+
+  .mobile-bottom-nav {
+    display: flex;
+  }
+
+  .top-header {
+    padding: 0 1rem;
+  }
+
+  .top-search-form {
+    display: none; /* Accessible in Search Page / Mobile Bottom Nav */
+  }
+
+  .btn-emergency-call {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.8rem;
+  }
+
+  .content-wrapper {
+    padding: 1rem;
+    gap: 1.25rem;
+  }
+
+  .hero-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-nepali-text {
+    font-size: 0.95rem;
+  }
+
+  .action-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-card.report {
+    grid-column: span 1;
+  }
+
+  .stats-cards-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-card:last-child {
+    grid-column: span 2;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Breakpoint: Small Mobile (< 480px) */
+@media (max-width: 480px) {
+  .hero-badges-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats-cards-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card:last-child {
+    grid-column: span 1;
+  }
+
+  .stat-value {
+    font-size: 1.45rem;
+  }
+}

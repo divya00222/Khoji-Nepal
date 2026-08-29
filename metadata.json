@@ -1,0 +1,7 @@
+{
+  "name": "Khoji Nepal",
+  "description": "Rasuwa Flood Information & Response Platform - Centralized public-information portal for missing persons, rescue tracking, relief distribution, official updates, and emergency coordination.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

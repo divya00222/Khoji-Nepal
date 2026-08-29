@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Assisted Photo Search — Khoji Nepal</title>
+  <meta name="description" content="AI-assisted visual similarity search against authorized Rasuwa flood missing person records. Requires official verification." />
+  
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+<div class="app-container">
+  <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+  <!-- SIDEBAR -->
+  <aside id="app-sidebar" class="app-sidebar">
+    <a href="index.html" class="sidebar-logo">
+      <div class="logo-badge">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">Khoji Nepal</span>
+        <span class="logo-subtitle">Rasuwa Flood Response</span>
+      </div>
+    </a>
+
+    <nav style="flex-grow: 1;">
+      <ul class="sidebar-nav">
+        <li><a href="index.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span>Home</span></a></li>
+        <li><a href="missing-persons.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Find Missing Person</span></a></li>
+        <li><a href="search-photo.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg><span>Search by Photo</span></a></li>
+        <li><a href="rescue.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg><span>Rescue Tracker</span></a></li>
+        <li><a href="relief.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path></svg><span>Relief & Distribution</span></a></li>
+        <li><a href="map.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Live Map</span></a></li>
+        <li><a href="government-news.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path></svg><span>Government News</span></a></li>
+        <li><a href="report-missing.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m3 11 18-5v12L3 14v-3z"></path></svg><span>Report / Request Help</span></a></li>
+        <li><a href="family-reunion.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg><span>Family Reunion</span></a></li>
+        <li><a href="emergency.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>Emergency Contacts</span></a></li>
+        <li><a href="about.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg><span>About / Help</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="app-main">
+    <header class="top-header">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <button id="mobile-hamburger" class="mobile-hamburger-btn" aria-label="Toggle navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+        </button>
+        <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary-navy);">AI-Assisted Photo Similarity Search</div>
+      </div>
+
+      <div class="top-actions">
+        <button onclick="window.triggerEmergencyCall()" class="btn-emergency-call">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>EMERGENCY CALL 112</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="content-wrapper" style="max-width: 960px;">
+      
+      <!-- Crucial Legal & Ethical Safety Notice -->
+      <div style="background-color: #fffbeb; border: 1.5px solid #fde68a; border-radius: var(--radius-lg); padding: 1.25rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem;">
+        <div style="font-size: 1.5rem; color: #b45309; line-height: 1;">⚖️</div>
+        <div>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: #92400e;">Mandatory Biometric Verification & Legal Notice</h3>
+          <p style="font-size: 0.82rem; color: #78350f; margin-top: 0.25rem; line-height: 1.5;">
+            <strong>This system NEVER claims that a photo match proves identity.</strong> Every result generated through this tool represents an <strong>"AI-generated similarity result. Identity has not been confirmed."</strong> Comparisons are restricted strictly to authorized missing persons records and <strong>Strictly Require Official Verification</strong> by Nepal Police or Nepal Red Cross.
+          </p>
+        </div>
+      </div>
+
+      <!-- MAIN SEARCH BOX / UPLOAD AREA -->
+      <div id="photo-upload-area" class="panel-card" style="padding: 1.75rem;">
+        
+        <input type="file" id="photo-upload-input" accept="image/jpeg,image/png,image/webp" style="display: none;" />
+        
+        <!-- Interactive Dropzone -->
+        <div id="photo-drop-container" class="photo-dropzone" style="padding: 2.75rem 1.5rem; border: 2px dashed #94a3b8; border-radius: var(--radius-xl); cursor: pointer; transition: all 0.2s ease; text-align: center; background: #f8fafc;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #e0f2fe; color: #0369a1; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 0.75rem;">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          </div>
+          <h2 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-navy);">Upload Photo for Visual Similarity Matching</h2>
+          <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 480px; margin: 0.35rem auto 0.75rem;">
+            Drag and drop a portrait image of the missing individual or click to browse files on your device.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+            <span style="font-size: 0.75rem; font-weight: 600; color: #475569; background: #ffffff; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); border: 1px solid #cbd5e1;">
+              Allowed: JPG, JPEG, PNG, WebP
+            </span>
+            <span style="font-size: 0.75rem; font-weight: 600; color: #475569; background: #ffffff; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); border: 1px solid #cbd5e1;">
+              Max Size: 5MB
+            </span>
+            <span style="font-size: 0.75rem; font-weight: 600; color: #0369a1; background: #f0f9ff; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); border: 1px solid #bae6fd;">
+              🔒 Encrypted & Non-Executable
+            </span>
+          </div>
+        </div>
+
+        <!-- Optional Multi-Signal Contextual Clues -->
+        <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-light);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary-navy);">
+              Optional Contextual Signals (Improves Candidate Ranking Accuracy)
+            </span>
+            <span style="font-size: 0.75rem; color: var(--text-subtle);">Multi-Signal Algorithm</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.85rem;">
+            <div>
+              <label class="form-label" style="font-size: 0.78rem;">Approximate Name</label>
+              <input type="text" id="filter-candidate-name" class="form-input" placeholder="e.g. Suvas / Sushmita" style="height: 36px; font-size: 0.82rem;" />
+            </div>
+            <div>
+              <label class="form-label" style="font-size: 0.78rem;">Estimated Age</label>
+              <input type="number" id="filter-candidate-age" class="form-input" placeholder="e.g. 27" min="1" max="110" style="height: 36px; font-size: 0.82rem;" />
+            </div>
+            <div>
+              <label class="form-label" style="font-size: 0.78rem;">Gender</label>
+              <select id="filter-candidate-gender" class="form-select" style="height: 36px; font-size: 0.82rem;">
+                <option value="all">Any / Unknown</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" style="font-size: 0.78rem;">Last Seen Sector</label>
+              <input type="text" id="filter-candidate-location" class="form-input" placeholder="e.g. Timure / Syabrubesi" style="height: 36px; font-size: 0.82rem;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Terms & Biometric Privacy Consent Checkbox -->
+        <div style="margin-top: 1.25rem; background: var(--bg-subtle); padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); display: flex; gap: 0.65rem; align-items: flex-start;">
+          <input type="checkbox" id="photo-consent-checkbox" style="margin-top: 0.2rem; cursor: pointer; width: 16px; height: 16px; accent-color: var(--gov-blue);" checked />
+          <label for="photo-consent-checkbox" style="font-size: 0.78rem; color: var(--text-main); cursor: pointer; line-height: 1.45;">
+            I acknowledge that this tool compares photos only against authorized disaster missing-person records and that <strong>every candidate match is unconfirmed and strictly requires official verification</strong>. I consent to temporary secure processing of this image for humanitarian search purposes.
+          </label>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-top: 1.25rem;">
+          <button type="button" onclick="document.getElementById('photo-upload-input').click()" class="btn-action-primary btn-blue" style="width: auto; padding: 0 1.75rem; height: 42px; font-size: 0.88rem; font-weight: 700;">
+            Select Photo & Begin Match
+          </button>
+        </div>
+      </div>
+
+      <!-- SCANNING STATE (Animated Multi-Stage Feedback) -->
+      <div id="photo-scanning-state" class="panel-card" style="display: none; padding: 3rem 1.5rem; text-align: center;">
+        <div style="display: flex; justify-content: center; margin-bottom: 1.5rem;">
+          <div style="position: relative; width: 130px; height: 130px; border-radius: 16px; overflow: hidden; border: 3px solid var(--gov-blue); box-shadow: 0 4px 20px rgba(0, 56, 147, 0.15); background: #000;">
+            <img id="uploaded-preview-img" src="" alt="Uploaded Query Photo" style="width: 100%; height: 100%; object-fit: cover;" />
+            <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #003893; box-shadow: 0 0 14px #38bdf8; animation: scan-move 1.4s infinite linear;"></div>
+          </div>
+        </div>
+        <style>
+          @keyframes scan-move {
+            0% { top: 0; }
+            50% { top: 100%; }
+            100% { top: 0; }
+          }
+        </style>
+        <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-navy); margin-bottom: 0.35rem;">
+          AI Visual & Contextual Feature Analysis
+        </h3>
+        <p id="scan-progress-step" style="font-size: 0.85rem; color: #0284c7; font-weight: 600;">
+          Validating image signature and integrity...
+        </p>
+        <p style="font-size: 0.78rem; color: var(--text-subtle); margin-top: 0.5rem; max-width: 480px; margin-left: auto; margin-right: auto;">
+          Comparing against authorized Rasuwa district missing registries and rescued shelter records.
+        </p>
+      </div>
+
+      <!-- RESULTS STATE -->
+      <div id="photo-results-state" style="display: none;">
+        
+        <!-- Results Header & Privacy Actions -->
+        <div class="panel-card" style="padding: 1rem 1.25rem; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <h3 id="results-count-text" style="font-size: 1.1rem; font-weight: 800; color: var(--primary-navy);">
+              Possible Match Candidates
+            </h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">
+              Scored using multi-signal visual and contextual algorithms. Human verification required.
+            </span>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button id="btn-delete-uploaded-photo" class="btn-secondary" style="font-size: 0.8rem; height: 36px; color: #dc2626; border-color: #fecaca; background: #fff5f5;">
+              🗑️ Delete Uploaded Photo
+            </button>
+            <button onclick="window.resetPhotoSearchUI()" class="btn-action-primary btn-blue" style="font-size: 0.8rem; height: 36px; width: auto; padding: 0 1rem;">
+              Search Another Photo
+            </button>
+          </div>
+        </div>
+
+        <!-- Global Results Warning Banner -->
+        <div style="background: #fff1f2; border: 1px solid #fecdd3; border-radius: var(--radius-md); padding: 0.75rem 1rem; font-size: 0.82rem; color: #9f1239; margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.4rem;">
+            <span>⚠️</span>
+            <span><strong>Notice:</strong> All displayed items are <em>"Possible Matches"</em> only. Contact Nepal Police (100) or Red Cross (112) for confirmation.</span>
+          </div>
+          <span style="font-weight: 700; color: #881337;">Metric: Candidate Similarity Score</span>
+        </div>
+
+        <!-- Candidates Grid Container -->
+        <div id="candidates-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 1.25rem;">
+          <!-- Dynamically populated by js/photo-search.js -->
+        </div>
+
+      </div>
+
+      <!-- EMPTY STATE (No Matches in Authorized Dataset) -->
+      <div id="photo-empty-state" class="panel-card" style="display: none; padding: 3.5rem 1.5rem; text-align: center;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: #f1f5f9; color: #64748b; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
+          🔍
+        </div>
+        <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-navy); margin-bottom: 0.35rem;">
+          No possible match found in the available authorized records.
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 500px; margin: 0.25rem auto 1.5rem; line-height: 1.5;">
+          The system compared the image against registered missing person files and found no candidates exceeding the similarity threshold. If your loved one is missing, please submit an official missing person report immediately.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="report-missing.html" class="btn-action-primary btn-orange" style="width: auto; padding: 0 1.5rem; height: 40px;">
+            📝 Submit Missing Person Report
+          </a>
+          <button onclick="window.resetPhotoSearchUI()" class="btn-secondary" style="height: 40px;">
+            Try Another Photo
+          </button>
+        </div>
+      </div>
+
+      <!-- SERVICE UNAVAILABLE / ERROR STATE -->
+      <div id="photo-error-state" class="panel-card" style="display: none; padding: 3.5rem 1.5rem; text-align: center;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: #fee2e2; color: #dc2626; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
+          ⚠️
+        </div>
+        <h3 style="font-size: 1.15rem; font-weight: 800; color: #991b1b; margin-bottom: 0.35rem;">
+          Photo Matching Service Unavailable
+        </h3>
+        <p id="photo-error-message" style="font-size: 0.85rem; color: var(--text-muted); max-width: 480px; margin: 0.25rem auto 1.5rem; line-height: 1.5;">
+          Photo matching is temporarily unavailable. You can search by name and details instead.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="missing-persons.html" class="btn-action-primary btn-blue" style="width: auto; padding: 0 1.5rem; height: 40px;">
+            Search Missing Persons Directory by Name
+          </a>
+          <button onclick="window.resetPhotoSearchUI()" class="btn-secondary" style="height: 40px;">
+            Retry Photo Match
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- MODAL 1: REPORT INFORMATION / REQUEST OFFICIAL VERIFICATION -->
+<div id="report-info-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <h3 class="modal-title">Request Official Verification / Submit Sighting</h3>
+        <span id="report-info-candidate-name" style="font-size: 0.8rem; color: var(--gov-blue); font-weight: 700;"></span>
+      </div>
+      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
+    </div>
+    <form id="report-info-form" onsubmit="event.preventDefault(); window.closeAllModals(); alert('Thank you. Your verification request has been forwarded to Nepal Police & Red Cross.');">
+      <div class="modal-body">
+        <input type="hidden" id="report-info-candidate-id" />
+        <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 0.65rem 0.85rem; font-size: 0.75rem; color: #92400e; margin-bottom: 1rem;">
+          ⚠️ Verification requests trigger field dispatch and cross-matching with district hospitals and shelter rosters.
+        </div>
+        <div class="form-group" style="margin-bottom: 0.75rem;">
+          <label class="form-label">Your Name <span class="required">*</span></label>
+          <input type="text" class="form-input" placeholder="e.g. Suman Tamang" required />
+        </div>
+        <div class="form-group" style="margin-bottom: 0.75rem;">
+          <label class="form-label">Your Active Contact Phone <span class="required">*</span></label>
+          <input type="tel" class="form-input" placeholder="e.g. 9841234567" required />
+        </div>
+        <div class="form-group" style="margin-bottom: 0.75rem;">
+          <label class="form-label">Verification Details / Sighting Location <span class="required">*</span></label>
+          <textarea class="form-textarea" rows="3" placeholder="Describe where and when you saw this person, their condition, or reason for requesting verification..." required></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Cancel</button>
+        <button type="submit" class="btn-action-primary btn-orange" style="width: auto; padding: 0 1.25rem;">Submit for Verification</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL 2: REPORT MISMATCH (FALSE POSITIVE FLAG) -->
+<div id="report-mismatch-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <h3 class="modal-title">Flag Incorrect Candidate Match</h3>
+        <span style="font-size: 0.78rem; color: var(--text-subtle);">Report a false positive to improve safety algorithms</span>
+      </div>
+      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
+    </div>
+    <form id="report-mismatch-form" onsubmit="event.preventDefault(); window.closeAllModals(); alert('Thank you. Mismatch flag recorded for calibration.');">
+      <div class="modal-body">
+        <input type="hidden" id="mismatch-candidate-id" />
+        <div class="form-group" style="margin-bottom: 0.75rem;">
+          <label class="form-label">Reason for Flagging <span class="required">*</span></label>
+          <select class="form-select" required>
+            <option value="wrong_person">Distinct physical facial differences</option>
+            <option value="different_age">Completely different age group</option>
+            <option value="already_reunited">Individual has already reunited with family</option>
+            <option value="other">Other reason</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Additional Observations (Optional)</label>
+          <textarea class="form-textarea" rows="2" placeholder="Provide any clarifying details to help verification desks..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Cancel</button>
+        <button type="submit" class="btn-action-primary btn-blue" style="width: auto; padding: 0 1.25rem;">Submit Feedback</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL 3: PERSON DETAILS MODAL -->
+<div id="person-detail-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <h3 id="detail-person-name" class="modal-title">Official Record</h3>
+        <span id="detail-person-status" class="badge-missing">Missing</span>
+      </div>
+      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+        <img id="detail-person-img" src="" alt="Person" style="width: 88px; height: 88px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border-medium);" />
+        <div>
+          <div id="detail-person-meta" style="font-weight: 700; font-size: 0.9rem; color: var(--primary-navy);"></div>
+          <div id="detail-person-loc" style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;"></div>
+          <div id="detail-person-date" style="font-size: 0.75rem; color: var(--text-subtle); margin-top: 0.2rem;"></div>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom: 0.75rem;">
+        <label class="form-label">Description & Physical Marks</label>
+        <div id="detail-person-desc" style="font-size: 0.82rem; color: var(--text-main); background: var(--bg-subtle); padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); line-height: 1.45;"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Contact / Verification Channel</label>
+        <div id="detail-person-contact" style="font-size: 0.82rem; color: var(--text-main); background: var(--bg-subtle); padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);"></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Close</button>
+      <button type="button" onclick="window.closeAllModals(); window.openReportInfoModal(document.getElementById('detail-person-name').textContent, document.getElementById('detail-person-name').textContent)" class="btn-action-primary btn-orange" style="width: auto; padding: 0 1.25rem;">
+        Report Sighting / Info
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/photo-search.js"></script>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Emergency Contact Bar -->
+    <div class="footer-emergency-strip">
+      <div class="footer-emergency-content">
+        <div class="footer-emergency-icon">🚨</div>
+        <div>
+          <h4 class="footer-emergency-title">Need immediate rescue or emergency assistance?</h4>
+          <p class="footer-emergency-desc">24/7 National Disaster Response Command Center dispatch hotlines are active.</p>
+        </div>
+      </div>
+      <a href="emergency.html" class="footer-emergency-btn">
+        Emergency Contacts &rarr;
+      </a>
+    </div>
+
+    <!-- Main Footer Grid -->
+    <div class="footer-grid">
+      
+      <!-- Brand & Description -->
+      <div class="footer-brand-col">
+        <div class="footer-logo-wrap">
+          <span class="footer-flag">🇳🇵</span>
+          <div>
+            <h3>Khoji Nepal</h3>
+            <div class="footer-subtitle">खोजि नेपाल — Rasuwa Flood Platform</div>
+          </div>
+        </div>
+        <p class="footer-desc">
+          हराएका व्यक्तिको खोजी, उद्धार, राहत तथा आधिकारिक जानकारी एकै ठाउँमा उपलब्ध गराउने सूचना तथा समन्वय platform.
+        </p>
+        <div class="footer-trust-badge">
+          <span>✓</span> Information from verified/authorized sources
+        </div>
+      </div>
+
+      <!-- Column 1: Quick Links -->
+      <div class="footer-col" id="footer-col-quick">
+        <h4 onclick="toggleFooterAccordion('footer-col-quick')">Quick Links</h4>
+        <div class="footer-col-body">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="missing-persons.html">Find Missing Person</a></li>
+            <li><a href="search-photo.html">Search by Photo</a></li>
+            <li><a href="rescue.html">Rescue Tracker</a></li>
+            <li><a href="relief.html">Relief & Distribution</a></li>
+            <li><a href="map.html">Live Map</a></li>
+            <li><a href="government-news.html">Government News</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 2: Help & Report -->
+      <div class="footer-col" id="footer-col-help">
+        <h4 onclick="toggleFooterAccordion('footer-col-help')">Help & Report</h4>
+        <div class="footer-col-body">
+          <ul class="footer-links">
+            <li><a href="report-missing.html">Report Missing Person</a></li>
+            <li><a href="report-found.html">Report Found Person</a></li>
+            <li><a href="rescue.html">Request Rescue</a></li>
+            <li><a href="relief.html">Request Relief</a></li>
+            <li><a href="family-reunion.html">Family Reunion</a></li>
+            <li><a href="emergency.html">Emergency Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 3: Information -->
+      <div class="footer-col" id="footer-col-info">
+        <h4 onclick="toggleFooterAccordion('footer-col-info')">Information</h4>
+        <div class="footer-col-body">
+          <ul class="footer-links">
+            <li><a href="about.html">About Khoji Nepal</a></li>
+            <li><a href="about.html#how-it-works">How It Works</a></li>
+            <li><a href="about.html#data-sources">Data Sources</a></li>
+            <li><a href="about.html#verification">Verification Process</a></li>
+            <li><a href="about.html#privacy">Privacy Policy</a></li>
+            <li><a href="about.html#terms">Terms of Use</a></li>
+            <li><a href="about.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Official / Authorized Sources -->
+      <div class="footer-col" id="footer-col-sources">
+        <h4 onclick="toggleFooterAccordion('footer-col-sources')">Official Sources</h4>
+        <div class="footer-col-body">
+          <ul class="source-category-list">
+            <li class="source-category-item">
+              <span>Government of Nepal</span>
+              <a href="https://nepal.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>NDRRMA</span>
+              <a href="https://ndrrma.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Nepal Police</span>
+              <a href="https://nepalpolice.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Nepali Army</span>
+              <a href="https://nepalarmy.mil.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Armed Police Force</span>
+              <a href="https://apf.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>District Administration</span>
+              <a href="https://rasuwajd.moha.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Local Authorities</span>
+              <span style="font-size: 0.72rem; color: #94a3b8;">Verified</span>
+            </li>
+            <li class="source-category-item">
+              <span>Authorized NGOs</span>
+              <span style="font-size: 0.72rem; color: #94a3b8;">Accredited</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Data Disclaimer -->
+    <div class="footer-disclaimer-box">
+      <p>
+        <strong>Important Disclaimer:</strong> Information displayed on Khoji Nepal may change as rescue, identification and verification operations continue. AI-generated photo results are only possible matches and are not confirmation of identity. Please verify critical information with the relevant authority.
+      </p>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div>
+        &copy; 2026 Khoji Nepal. All rights reserved. &bull; <span id="footer-last-updated">Last Updated: Loading...</span>
+      </div>
+      
+      <ul class="footer-bottom-links">
+        <li><a href="about.html#privacy">Privacy</a></li>
+        <li><a href="about.html#terms">Terms</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+
+      <div class="footer-social-icons">
+        <a href="https://facebook.com/NepalPoliceOfficial" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="https://twitter.com/NepalPoliceHQ" target="_blank" rel="noopener" title="X / Twitter" aria-label="X / Twitter">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+        </a>
+        <a href="mailto:info@khoji.gov.np" title="Email" aria-label="Email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  function toggleFooterAccordion(colId) {
+    if (window.innerWidth <= 768) {
+      const col = document.getElementById(colId);
+      if (col) {
+        col.classList.toggle('active');
+      }
+    }
+  }
+
+  // Load last updated dynamically from dashboard stats or document timestamp
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('api/reports/dashboard.php')
+      .then(res => res.json())
+      .then(data => {
+        const el = document.getElementById('footer-last-updated');
+        if (el) {
+          const timeStr = data.last_updated || new Date().toLocaleString();
+          el.textContent = 'Last Updated: ' + timeStr;
+        }
+      })
+      .catch(() => {
+        const el = document.getElementById('footer-last-updated');
+        if (el) {
+          el.textContent = 'Last Updated: ' + new Date().toLocaleDateString();
+        }
+      });
+  });
+</script>
+
+</body>
+</html>

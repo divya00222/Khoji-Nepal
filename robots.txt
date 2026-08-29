@@ -1,0 +1,26 @@
+# Khoji Nepal (खोजि नेपाल) — Robots Configuration
+# https://khoji.gov.np
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /missing-persons.html
+Allow: /search-photo.html
+Allow: /rescue.html
+Allow: /relief.html
+Allow: /map.html
+Allow: /news.html
+Allow: /government-news.html
+Allow: /report-missing.html
+Allow: /report-found.html
+Allow: /family-reunion.html
+Allow: /emergency.html
+Allow: /about.html
+
+# Prohibit indexing of secure administrative console & private API endpoints
+Disallow: /admin.html
+Disallow: /api/admin/
+Disallow: /api/auth/
+Disallow: /uploads/photo_match/
+
+Sitemap: https://khoji.gov.np/sitemap.xml

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Official Government News & Bulletins — Khoji Nepal</title>
+  <meta name="description" content="Official government updates, Ministry of Home Affairs bulletins, NDRRMA disaster advisories, police updates, and road clearance reports." />
+  
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+<div class="app-container">
+  <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+  <!-- SIDEBAR NAVIGATION -->
+  <aside id="app-sidebar" class="app-sidebar">
+    <a href="index.html" class="sidebar-logo">
+      <div class="logo-badge">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">Khoji Nepal</span>
+        <span class="logo-subtitle">Rasuwa Flood Response</span>
+      </div>
+    </a>
+
+    <nav style="flex-grow: 1;">
+      <ul class="sidebar-nav">
+        <li><a href="index.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg><span>Home</span></a></li>
+        <li><a href="missing-persons.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Find Missing Person</span></a></li>
+        <li><a href="rescue.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg><span>Rescue Tracker</span></a></li>
+        <li><a href="relief.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path></svg><span>Relief & Distribution</span></a></li>
+        <li><a href="map.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Live Map</span></a></li>
+        <li><a href="government-news.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8V6Z"></path></svg><span>Government News</span></a></li>
+        <li><a href="report-missing.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m3 11 18-5v12L3 14v-3z"></path></svg><span>Report / Request Help</span></a></li>
+        <li><a href="family-reunion.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg><span>Family Reunion</span></a></li>
+        <li><a href="emergency.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>Emergency Contacts</span></a></li>
+        <li><a href="about.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg><span>About / Help</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- MAIN VIEWPORT -->
+  <main class="app-main">
+    
+    <!-- TOP HEADER -->
+    <header class="top-header">
+      <div style="display: flex; align-items: center;">
+        <button id="mobile-hamburger" class="mobile-hamburger-btn" aria-label="Toggle navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+        </button>
+        <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary-navy);">
+          Official Government Information Desk
+        </div>
+      </div>
+      <div class="top-actions">
+        <button id="admin-news-btn" class="btn-publish-advisory" style="display: none;" onclick="window.NewsModule.openCreateModal()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <span>Publish Advisory</span>
+        </button>
+        <button onclick="window.triggerEmergencyCall()" class="btn-emergency-call">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>EMERGENCY CALL 112</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="content-wrapper" style="max-width: 1200px;">
+      
+      <!-- STICKY / TOP EMERGENCY ALERT BANNER -->
+      <div id="emergency-alert-banner" class="emergency-alert-banner"></div>
+
+      <!-- HERO HEADER -->
+      <section class="gov-news-hero">
+        <div class="gov-news-hero-content">
+          <div>
+            <div class="gov-verified-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span>Accredited Response Command</span>
+            </div>
+            <h1 class="gov-news-title">Official Government Bulletins & Directives</h1>
+            <p class="gov-news-subtitle">
+              Verified real-time emergency advisories issued by NDRRMA, Ministry of Home Affairs, Nepal Police, Nepali Army, Armed Police Force, and District Administration Office Rasuwa.
+            </p>
+          </div>
+          <div class="gov-hero-actions">
+            <button type="button" class="btn-publish-advisory" onclick="window.NewsModule.openCreateModal()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              <span>Issue Official Bulletin</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILTER & SEARCH PANEL -->
+      <section class="news-filter-panel">
+        <form id="news-filter-form" onsubmit="event.preventDefault();">
+          <div class="news-filter-top-row">
+            <!-- Search bar -->
+            <div class="news-search-input-wrap">
+              <svg class="news-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="news-search-input" placeholder="Search by title, location, highway or keywords..." />
+            </div>
+
+            <!-- Organization Select -->
+            <select id="news-org-filter" class="news-select-filter">
+              <option value="all">All Official Sources</option>
+              <option value="Government of Nepal">Government of Nepal</option>
+              <option value="NDRRMA">NDRRMA</option>
+              <option value="Nepal Police">Nepal Police</option>
+              <option value="Nepali Army">Nepali Army</option>
+              <option value="Armed Police Force">Armed Police Force</option>
+              <option value="District Administration">District Administration (DAO)</option>
+              <option value="Local Municipality">Local Municipality</option>
+              <option value="Other Authorized Organizations">Nepal Red Cross / ICRC</option>
+            </select>
+
+            <!-- Priority Select -->
+            <select id="news-prio-filter" class="news-select-filter">
+              <option value="all">All Priorities</option>
+              <option value="critical">Critical Directives</option>
+              <option value="warning">Warning Notices</option>
+              <option value="info">General Advisories</option>
+            </select>
+
+            <!-- Date Select -->
+            <input type="date" id="news-date-filter" class="news-select-filter" title="Filter by published date" />
+
+            <!-- Reset Button -->
+            <button type="button" class="btn-secondary" onclick="window.NewsModule.resetFilters()">
+              Reset
+            </button>
+          </div>
+
+          <!-- Category Pills Row -->
+          <div class="cat-pills-row">
+            <span class="cat-pills-label">Category:</span>
+            <button type="button" class="cat-pill active" data-cat="all">All Updates</button>
+            <button type="button" class="cat-pill" data-cat="ROAD UPDATE">Road Updates</button>
+            <button type="button" class="cat-pill" data-cat="RESCUE UPDATE">Rescue Operations</button>
+            <button type="button" class="cat-pill" data-cat="RELIEF UPDATE">Relief & Supplies</button>
+            <button type="button" class="cat-pill" data-cat="WEATHER UPDATE">Weather & Flood</button>
+            <button type="button" class="cat-pill" data-cat="SAFETY NOTICE">Safety Notices</button>
+            
+            <label style="margin-left: auto; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 600; cursor: pointer;">
+              <input type="checkbox" id="news-important-filter" />
+              <span>★ Important Bulletins Only</span>
+            </label>
+          </div>
+        </form>
+      </section>
+
+      <!-- RESULTS SUMMARY BAR -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding: 0 0.25rem;">
+        <div id="news-results-count" style="font-size: 0.88rem; font-weight: 700; color: var(--primary-navy);">
+          Loading official bulletins...
+        </div>
+        <div style="font-size: 0.78rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.35rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Auto-synchronized with Disaster Response Command</span>
+        </div>
+      </div>
+
+      <!-- BULLETINS CARDS CONTAINER -->
+      <div id="news-cards-container" class="news-cards-container">
+        <!-- Dynamically rendered by /js/news.js -->
+      </div>
+
+      <!-- PAGINATION -->
+      <div id="news-pagination"></div>
+
+    </div>
+  </main>
+</div>
+
+<!-- 1. FULL BULLETIN DETAIL MODAL -->
+<div id="news-detail-modal" class="news-detail-modal-overlay">
+  <div class="news-detail-modal-card">
+    <div id="news-detail-modal-body">
+      <!-- Injected by /js/news.js -->
+    </div>
+  </div>
+</div>
+
+<!-- 2. ADMIN NEWS PUBLISHING MODAL -->
+<div id="admin-news-modal" class="news-detail-modal-overlay">
+  <div class="admin-news-modal-card">
+    <div class="news-modal-top">
+      <h2 id="admin-modal-title" style="font-size: 1.3rem; font-weight: 800; color: var(--primary-navy);">
+        Publish Official Government Advisory
+      </h2>
+      <button type="button" class="modal-close-btn" onclick="window.NewsModule.closeAdminModal()">×</button>
+    </div>
+
+    <form id="admin-news-form" style="display: flex; flex-direction: column; gap: 1rem;">
+      <input type="hidden" id="admin-news-id" name="id" value="" />
+
+      <div class="admin-form-grid">
+        <div class="admin-form-group col-span-2">
+          <label for="admin-news-title">Advisory Title *</label>
+          <input type="text" id="admin-news-title" name="title" required placeholder="e.g. Pasang Lhamu Highway One-Way Traffic Opened" />
+        </div>
+
+        <div class="admin-form-group">
+          <label for="admin-news-org">Accredited Organization *</label>
+          <select id="admin-news-org" name="organization" required>
+            <option value="NDRRMA">NDRRMA</option>
+            <option value="Government of Nepal">Government of Nepal (MOHA / NEOC)</option>
+            <option value="District Administration">District Administration (DAO Rasuwa)</option>
+            <option value="Nepali Army">Nepali Army Disaster Wing</option>
+            <option value="Nepal Police">Nepal Police</option>
+            <option value="Armed Police Force">Armed Police Force</option>
+            <option value="Local Municipality">Local Municipality</option>
+            <option value="Other Authorized Organizations">Nepal Red Cross Society</option>
+          </select>
+        </div>
+
+        <div class="admin-form-group">
+          <label for="admin-news-category">Category *</label>
+          <select id="admin-news-category" name="category" required>
+            <option value="ROAD UPDATE">Road & Transportation Update</option>
+            <option value="RESCUE UPDATE">Rescue & Extraction Update</option>
+            <option value="RELIEF UPDATE">Relief Logistics & Camp Supplies</option>
+            <option value="WEATHER UPDATE">Weather & Hydrology Alert</option>
+            <option value="SAFETY NOTICE">Safety & Health Directive</option>
+            <option value="GENERAL">General Bulletin</option>
+          </select>
+        </div>
+
+        <div class="admin-form-group">
+          <label for="admin-news-priority">Priority Level *</label>
+          <select id="admin-news-priority" name="priority" required>
+            <option value="info">Informational Advisory</option>
+            <option value="warning">Warning / Caution</option>
+            <option value="critical">Critical Evacuation / Emergency</option>
+          </select>
+        </div>
+
+        <div class="admin-form-group">
+          <label for="admin-news-status">Verification Status *</label>
+          <select id="admin-news-status" name="verification_status" required>
+            <option value="official">Official Verified Directive</option>
+            <option value="verified_bulletin">Verified Humanitarian Bulletin</option>
+            <option value="advisory">Advisory Notice</option>
+            <option value="press_release">Official Press Release</option>
+          </select>
+        </div>
+
+        <div class="admin-form-group col-span-2">
+          <label for="admin-news-source-url">Official Source Link / Press Release URL</label>
+          <input type="url" id="admin-news-source-url" name="source_url" placeholder="https://moha.gov.np/bulletin/..." />
+        </div>
+
+        <div class="admin-form-group col-span-2">
+          <label for="admin-news-summary">Key Summary Brief * (Short excerpt for cards)</label>
+          <textarea id="admin-news-summary" name="summary" rows="2" required placeholder="Concise summary for public card feed..."></textarea>
+        </div>
+
+        <div class="admin-form-group col-span-2">
+          <label for="admin-news-content">Full Advisory Text *</label>
+          <textarea id="admin-news-content" name="content" rows="6" required placeholder="Detailed official announcement, evacuation directives, camp locations, contact numbers..."></textarea>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 0.75rem 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+        <label class="admin-checkbox-row">
+          <input type="checkbox" id="admin-news-important" name="is_important" value="1" />
+          <span style="font-size: 0.85rem; font-weight: 600;">Pin as High-Priority Important Bulletin</span>
+        </label>
+        <label class="admin-checkbox-row">
+          <input type="checkbox" id="admin-news-published" name="is_published" value="1" checked />
+          <span style="font-size: 0.85rem; font-weight: 600;">Publish Immediately to Public Portal</span>
+        </label>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 0.5rem;">
+        <button type="button" class="btn-secondary" onclick="window.NewsModule.closeAdminModal()">Cancel</button>
+        <button type="submit" class="btn-primary" style="background: #2563eb; color: #ffffff;">Save & Transmit Bulletin</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/news.js"></script>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Emergency Contact Bar -->
+    <div class="footer-emergency-strip">
+      <div class="footer-emergency-content">
+        <div class="footer-emergency-icon">🚨</div>
+        <div>
+          <h4 class="footer-emergency-title">Need immediate rescue or emergency assistance?</h4>
+          <p class="footer-emergency-desc">24/7 National Disaster Response Command Center dispatch hotlines are active.</p>
+        </div>
+      </div>
+      <a href="emergency.html" class="footer-emergency-btn">
+        Emergency Contacts &rarr;
+      </a>
+    </div>
+
+    <!-- Main Footer Grid -->
+    <div class="footer-grid">
+      
+      <!-- Brand & Description -->
+      <div class="footer-brand-col">
+        <div class="footer-logo-wrap">
+          <span class="footer-flag">🇳🇵</span>
+          <div>
+            <h3>Khoji Nepal</h3>
+            <div class="footer-subtitle">खोजि नेपाल — Rasuwa Flood Platform</div>
+          </div>
+        </div>
+        <p class="footer-desc">
+          हराएका व्यक्तिको खोजी, उद्धार, राहत तथा आधिकारिक जानकारी एकै ठाउँमा उपलब्ध गराउने सूचना तथा समन्वय platform.
+        </p>
+        <div class="footer-trust-badge">
+          <span>✓</span> Information from verified/authorized sources
+        </div>
+      </div>
+
+      <!-- Column 1: Quick Links -->
+      <div class="footer-col" id="footer-col-quick">
+        <h4 onclick="toggleFooterAccordion('footer-col-quick')">Quick Links</h4>
+        <div class="footer-col-body">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="missing-persons.html">Find Missing Person</a></li>
+            <li><a href="search-photo.html">Search by Photo</a></li>
+            <li><a href="rescue.html">Rescue Tracker</a></li>
+            <li><a href="relief.html">Relief & Distribution</a></li>
+            <li><a href="map.html">Live Map</a></li>
+            <li><a href="government-news.html">Government News</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 2: Help & Report -->
+      <div class="footer-col" id="footer-col-help">
+        <h4 onclick="toggleFooterAccordion('footer-col-help')">Help & Report</h4>
+        <div class="footer-col-body">
+          <ul class="footer-links">
+            <li><a href="report-missing.html">Report Missing Person</a></li>
+            <li><a href="report-found.html">Report Found Person</a></li>
+            <li><a href="rescue.html">Request Rescue</a></li>
+            <li><a href="relief.html">Request Relief</a></li>
+            <li><a href="family-reunion.html">Family Reunion</a></li>
+            <li><a href="emergency.html">Emergency Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 3: Information -->
+      <div class="footer-col" id="footer-col-info">
+        <h4 onclick="toggleFooterAccordion('footer-col-info')">Information</h4>
+        <div class="footer-col-body">
+          <ul class="footer-links">
+            <li><a href="about.html">About Khoji Nepal</a></li>
+            <li><a href="about.html#how-it-works">How It Works</a></li>
+            <li><a href="about.html#data-sources">Data Sources</a></li>
+            <li><a href="about.html#verification">Verification Process</a></li>
+            <li><a href="about.html#privacy">Privacy Policy</a></li>
+            <li><a href="about.html#terms">Terms of Use</a></li>
+            <li><a href="about.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Official / Authorized Sources -->
+      <div class="footer-col" id="footer-col-sources">
+        <h4 onclick="toggleFooterAccordion('footer-col-sources')">Official Sources</h4>
+        <div class="footer-col-body">
+          <ul class="source-category-list">
+            <li class="source-category-item">
+              <span>Government of Nepal</span>
+              <a href="https://nepal.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>NDRRMA</span>
+              <a href="https://ndrrma.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Nepal Police</span>
+              <a href="https://nepalpolice.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Nepali Army</span>
+              <a href="https://nepalarmy.mil.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Armed Police Force</span>
+              <a href="https://apf.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>District Administration</span>
+              <a href="https://rasuwajd.moha.gov.np" target="_blank" rel="noopener" class="source-verify-link">Original</a>
+            </li>
+            <li class="source-category-item">
+              <span>Local Authorities</span>
+              <span style="font-size: 0.72rem; color: #94a3b8;">Verified</span>
+            </li>
+            <li class="source-category-item">
+              <span>Authorized NGOs</span>
+              <span style="font-size: 0.72rem; color: #94a3b8;">Accredited</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Data Disclaimer -->
+    <div class="footer-disclaimer-box">
+      <p>
+        <strong>Important Disclaimer:</strong> Information displayed on Khoji Nepal may change as rescue, identification and verification operations continue. AI-generated photo results are only possible matches and are not confirmation of identity. Please verify critical information with the relevant authority.
+      </p>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div>
+        &copy; 2026 Khoji Nepal. All rights reserved. &bull; <span id="footer-last-updated">Last Updated: Loading...</span>
+      </div>
+      
+      <ul class="footer-bottom-links">
+        <li><a href="about.html#privacy">Privacy</a></li>
+        <li><a href="about.html#terms">Terms</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+
+      <div class="footer-social-icons">
+        <a href="https://facebook.com/NepalPoliceOfficial" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="https://twitter.com/NepalPoliceHQ" target="_blank" rel="noopener" title="X / Twitter" aria-label="X / Twitter">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+        </a>
+        <a href="mailto:info@khoji.gov.np" title="Email" aria-label="Email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  function toggleFooterAccordion(colId) {
+    if (window.innerWidth <= 768) {
+      const col = document.getElementById(colId);
+      if (col) {
+        col.classList.toggle('active');
+      }
+    }
+  }
+
+  // Load last updated dynamically from dashboard stats or document timestamp
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('api/reports/dashboard.php')
+      .then(res => res.json())
+      .then(data => {
+        const el = document.getElementById('footer-last-updated');
+        if (el) {
+          const timeStr = data.last_updated || new Date().toLocaleString();
+          el.textContent = 'Last Updated: ' + timeStr;
+        }
+      })
+      .catch(() => {
+        const el = document.getElementById('footer-last-updated');
+        if (el) {
+          el.textContent = 'Last Updated: ' + new Date().toLocaleDateString();
+        }
+      });
+  });
+</script>
+
+</body>
+</html>
