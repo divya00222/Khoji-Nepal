@@ -124,23 +124,7 @@
       </div>
 
     </div>
-  </main>
-</div>
-
-<script src="js/main.js"></script>
-<script src="js/navigation.js"></script>
-<script src="js/ui.js"></script>
-<script>
-  window.checkTracingStatus = function() {
-    const val = document.getElementById('tracing-id-input').value.trim();
-    if (!val) {
-      window.showToast('Please enter a valid tracing case number.', 'error');
-      return;
-    }
-    window.showToast('Tracing Case ' + val + ': Match identified at Dhunche Hospital Ward 2. Officer contact: +977-9851000222', 'success');
-  };
-</script>
-
+  
 <footer class="site-footer">
   <div class="footer-container">
     
@@ -332,6 +316,24 @@
       });
   });
 </script>
+</main>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/ui.js"></script>
+<script>
+  window.checkTracingStatus = function() {
+    const val = document.getElementById('tracing-id-input').value.trim();
+    if (!val) {
+      window.showToast('Please enter a valid tracing case number.', 'error');
+      return;
+    }
+    window.showToast('Tracing Case ' + val + ': Match identified at Dhunche Hospital Ward 2. Officer contact: +977-9851000222', 'success');
+  };
+</script>
+
+
 
 </body>
 </html>

@@ -116,37 +116,7 @@
       </div>
 
     </div>
-  </main>
-</div>
-
-<!-- Modal: Map Marker Details -->
-<div id="map-detail-modal" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div style="display: flex; align-items: center; gap: 0.75rem;">
-        <h3 id="marker-modal-title" class="modal-title"></h3>
-        <span id="marker-modal-type" class="status-badge available"></span>
-      </div>
-      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
-    </div>
-    <div class="modal-body">
-      <div id="marker-modal-coords" style="font-size: 0.82rem; font-weight: 700; color: var(--gov-blue);"></div>
-      <p id="marker-modal-desc" style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; background: var(--bg-subtle); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); margin-top: 0.5rem;"></p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Close</button>
-      <button type="button" onclick="window.openRescueModal('Map Detail Request')" class="btn-action-primary btn-orange" style="width: auto; padding: 0 1.25rem;">
-        🚨 Request Rescue for Area
-      </button>
-    </div>
-  </div>
-</div>
-
-<script src="js/main.js"></script>
-<script src="js/navigation.js"></script>
-<script src="js/map.js"></script>
-<script src="js/ui.js"></script>
-
+  
 <footer class="site-footer">
   <div class="footer-container">
     
@@ -338,6 +308,38 @@
       });
   });
 </script>
+</main>
+</div>
+
+<!-- Modal: Map Marker Details -->
+<div id="map-detail-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <h3 id="marker-modal-title" class="modal-title"></h3>
+        <span id="marker-modal-type" class="status-badge available"></span>
+      </div>
+      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="marker-modal-coords" style="font-size: 0.82rem; font-weight: 700; color: var(--gov-blue);"></div>
+      <p id="marker-modal-desc" style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; background: var(--bg-subtle); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); margin-top: 0.5rem;"></p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Close</button>
+      <button type="button" onclick="window.openRescueModal('Map Detail Request')" class="btn-action-primary btn-orange" style="width: auto; padding: 0 1.25rem;">
+        🚨 Request Rescue for Area
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/map.js"></script>
+<script src="js/ui.js"></script>
+
+
 
 </body>
 </html>

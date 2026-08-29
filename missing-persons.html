@@ -151,91 +151,7 @@
     </div>
 
     <!-- FOOTER -->
-    </main>
-</div>
-
-<!-- Reusable Person Details Modal -->
-<div id="person-detail-modal" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-header">
-      <h3 class="modal-title">Missing Person File</h3>
-      <button class="modal-close-btn">✕</button>
-    </div>
-    <div class="modal-body">
-      <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
-        <img id="detail-person-img" src="" alt="Person" style="width: 110px; height: 110px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border-medium);" />
-        <div style="display: flex; flex-direction: column; gap: 0.35rem; flex-grow: 1;">
-          <div style="display: flex; align-items: center; justify-content: space-between;">
-            <h2 id="detail-person-name" style="font-size: 1.25rem; font-weight: 800; color: var(--primary-navy);"></h2>
-            <span id="detail-person-status" class="badge-missing"></span>
-          </div>
-          <span id="detail-person-meta" style="font-size: 0.88rem; font-weight: 600; color: var(--text-muted);"></span>
-          <span style="font-size: 0.82rem; color: var(--text-subtle);">Last Location: <strong id="detail-person-loc"></strong></span>
-          <span style="font-size: 0.78rem; color: #94a3b8;">Missing Date: <span id="detail-person-date"></span></span>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-subtle); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
-        <h4 style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.35rem;">PHYSICAL DETAILS & LAST SEEN:</h4>
-        <p id="detail-person-desc" style="font-size: 0.85rem; color: var(--text-main); line-height: 1.4;"></p>
-      </div>
-
-      <div style="background: #eff6ff; padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid #bfdbfe;">
-        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gov-blue);">OFFICIAL INQUIRY CONTACT:</span>
-        <p id="detail-person-contact" style="font-size: 0.88rem; font-weight: 700; color: var(--primary-navy); margin-top: 0.2rem;"></p>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn-secondary btn-modal-close">Close</button>
-      <button type="button" onclick="window.openSubmitInfoModal()" class="btn-action-primary btn-blue" style="width: auto; padding: 0 1.25rem;">
-        Report Sighting / Intel
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- Modal: Sighting -->
-<div id="sighting-modal" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-header">
-      <h3 class="modal-title">Report Sighting of <span id="sighting-person-name"></span></h3>
-      <button class="modal-close-btn">✕</button>
-    </div>
-    <form id="sighting-form">
-      <input type="hidden" id="sighting-person-id" />
-      <div class="modal-body">
-        <div class="form-group">
-          <label class="form-label">Where did you see this person in Rasuwa? <span class="required">*</span></label>
-          <input type="text" id="sighting-location" class="form-input" placeholder="e.g. Syabrubesi shelter, near relief camp 2" required />
-        </div>
-        <div class="form-group">
-          <label class="form-label">When was the sighting? (Date & Approximate Time)</label>
-          <input type="text" class="form-input" placeholder="e.g. 29 Aug 2026, 8:00 AM" />
-        </div>
-        <div class="form-group">
-          <label class="form-label">Observed Condition / Details</label>
-          <textarea class="form-textarea" rows="2" placeholder="Describe physical state, clothes, who they were with..."></textarea>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Your Phone Number for Officer Follow-up <span class="required">*</span></label>
-          <input type="tel" id="sighting-phone" class="form-input" placeholder="98XXXXXXXX" required />
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn-secondary btn-modal-close">Cancel</button>
-        <button type="submit" class="btn-action-primary btn-green" style="width: auto; padding: 0 1.5rem;">Submit Sighting</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- SCRIPTS -->
-<script src="js/main.js"></script>
-<script src="js/navigation.js"></script>
-<script src="js/search.js"></script>
-<script src="js/ui.js"></script>
-
-
+    
 <footer class="site-footer">
   <div class="footer-container">
     
@@ -427,6 +343,92 @@
       });
   });
 </script>
+</main>
+</div>
+
+<!-- Reusable Person Details Modal -->
+<div id="person-detail-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 class="modal-title">Missing Person File</h3>
+      <button class="modal-close-btn">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+        <img id="detail-person-img" src="" alt="Person" style="width: 110px; height: 110px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border-medium);" />
+        <div style="display: flex; flex-direction: column; gap: 0.35rem; flex-grow: 1;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <h2 id="detail-person-name" style="font-size: 1.25rem; font-weight: 800; color: var(--primary-navy);"></h2>
+            <span id="detail-person-status" class="badge-missing"></span>
+          </div>
+          <span id="detail-person-meta" style="font-size: 0.88rem; font-weight: 600; color: var(--text-muted);"></span>
+          <span style="font-size: 0.82rem; color: var(--text-subtle);">Last Location: <strong id="detail-person-loc"></strong></span>
+          <span style="font-size: 0.78rem; color: #94a3b8;">Missing Date: <span id="detail-person-date"></span></span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-subtle); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+        <h4 style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.35rem;">PHYSICAL DETAILS & LAST SEEN:</h4>
+        <p id="detail-person-desc" style="font-size: 0.85rem; color: var(--text-main); line-height: 1.4;"></p>
+      </div>
+
+      <div style="background: #eff6ff; padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid #bfdbfe;">
+        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gov-blue);">OFFICIAL INQUIRY CONTACT:</span>
+        <p id="detail-person-contact" style="font-size: 0.88rem; font-weight: 700; color: var(--primary-navy); margin-top: 0.2rem;"></p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn-secondary btn-modal-close">Close</button>
+      <button type="button" onclick="window.openSubmitInfoModal()" class="btn-action-primary btn-blue" style="width: auto; padding: 0 1.25rem;">
+        Report Sighting / Intel
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Sighting -->
+<div id="sighting-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 class="modal-title">Report Sighting of <span id="sighting-person-name"></span></h3>
+      <button class="modal-close-btn">✕</button>
+    </div>
+    <form id="sighting-form">
+      <input type="hidden" id="sighting-person-id" />
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Where did you see this person in Rasuwa? <span class="required">*</span></label>
+          <input type="text" id="sighting-location" class="form-input" placeholder="e.g. Syabrubesi shelter, near relief camp 2" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">When was the sighting? (Date & Approximate Time)</label>
+          <input type="text" class="form-input" placeholder="e.g. 29 Aug 2026, 8:00 AM" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Observed Condition / Details</label>
+          <textarea class="form-textarea" rows="2" placeholder="Describe physical state, clothes, who they were with..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Phone Number for Officer Follow-up <span class="required">*</span></label>
+          <input type="tel" id="sighting-phone" class="form-input" placeholder="98XXXXXXXX" required />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary btn-modal-close">Cancel</button>
+        <button type="submit" class="btn-action-primary btn-green" style="width: auto; padding: 0 1.5rem;">Submit Sighting</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/main.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/search.js"></script>
+<script src="js/ui.js"></script>
+
+
+
 
 </body>
 </html>

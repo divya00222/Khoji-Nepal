@@ -260,123 +260,7 @@
       </div>
 
     </div>
-  </main>
-</div>
-
-<!-- MODAL 1: REPORT INFORMATION / REQUEST OFFICIAL VERIFICATION -->
-<div id="report-info-modal" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div>
-        <h3 class="modal-title">Request Official Verification / Submit Sighting</h3>
-        <span id="report-info-candidate-name" style="font-size: 0.8rem; color: var(--gov-blue); font-weight: 700;"></span>
-      </div>
-      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
-    </div>
-    <form id="report-info-form" onsubmit="event.preventDefault(); window.closeAllModals(); alert('Thank you. Your verification request has been forwarded to Nepal Police & Red Cross.');">
-      <div class="modal-body">
-        <input type="hidden" id="report-info-candidate-id" />
-        <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 0.65rem 0.85rem; font-size: 0.75rem; color: #92400e; margin-bottom: 1rem;">
-          ⚠️ Verification requests trigger field dispatch and cross-matching with district hospitals and shelter rosters.
-        </div>
-        <div class="form-group" style="margin-bottom: 0.75rem;">
-          <label class="form-label">Your Name <span class="required">*</span></label>
-          <input type="text" class="form-input" placeholder="e.g. Suman Tamang" required />
-        </div>
-        <div class="form-group" style="margin-bottom: 0.75rem;">
-          <label class="form-label">Your Active Contact Phone <span class="required">*</span></label>
-          <input type="tel" class="form-input" placeholder="e.g. 9841234567" required />
-        </div>
-        <div class="form-group" style="margin-bottom: 0.75rem;">
-          <label class="form-label">Verification Details / Sighting Location <span class="required">*</span></label>
-          <textarea class="form-textarea" rows="3" placeholder="Describe where and when you saw this person, their condition, or reason for requesting verification..." required></textarea>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Cancel</button>
-        <button type="submit" class="btn-action-primary btn-orange" style="width: auto; padding: 0 1.25rem;">Submit for Verification</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- MODAL 2: REPORT MISMATCH (FALSE POSITIVE FLAG) -->
-<div id="report-mismatch-modal" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div>
-        <h3 class="modal-title">Flag Incorrect Candidate Match</h3>
-        <span style="font-size: 0.78rem; color: var(--text-subtle);">Report a false positive to improve safety algorithms</span>
-      </div>
-      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
-    </div>
-    <form id="report-mismatch-form" onsubmit="event.preventDefault(); window.closeAllModals(); alert('Thank you. Mismatch flag recorded for calibration.');">
-      <div class="modal-body">
-        <input type="hidden" id="mismatch-candidate-id" />
-        <div class="form-group" style="margin-bottom: 0.75rem;">
-          <label class="form-label">Reason for Flagging <span class="required">*</span></label>
-          <select class="form-select" required>
-            <option value="wrong_person">Distinct physical facial differences</option>
-            <option value="different_age">Completely different age group</option>
-            <option value="already_reunited">Individual has already reunited with family</option>
-            <option value="other">Other reason</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Additional Observations (Optional)</label>
-          <textarea class="form-textarea" rows="2" placeholder="Provide any clarifying details to help verification desks..."></textarea>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Cancel</button>
-        <button type="submit" class="btn-action-primary btn-blue" style="width: auto; padding: 0 1.25rem;">Submit Feedback</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- MODAL 3: PERSON DETAILS MODAL -->
-<div id="person-detail-modal" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div>
-        <h3 id="detail-person-name" class="modal-title">Official Record</h3>
-        <span id="detail-person-status" class="badge-missing">Missing</span>
-      </div>
-      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
-    </div>
-    <div class="modal-body">
-      <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
-        <img id="detail-person-img" src="" alt="Person" style="width: 88px; height: 88px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border-medium);" />
-        <div>
-          <div id="detail-person-meta" style="font-weight: 700; font-size: 0.9rem; color: var(--primary-navy);"></div>
-          <div id="detail-person-loc" style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;"></div>
-          <div id="detail-person-date" style="font-size: 0.75rem; color: var(--text-subtle); margin-top: 0.2rem;"></div>
-        </div>
-      </div>
-      <div class="form-group" style="margin-bottom: 0.75rem;">
-        <label class="form-label">Description & Physical Marks</label>
-        <div id="detail-person-desc" style="font-size: 0.82rem; color: var(--text-main); background: var(--bg-subtle); padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); line-height: 1.45;"></div>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Contact / Verification Channel</label>
-        <div id="detail-person-contact" style="font-size: 0.82rem; color: var(--text-main); background: var(--bg-subtle); padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);"></div>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Close</button>
-      <button type="button" onclick="window.closeAllModals(); window.openReportInfoModal(document.getElementById('detail-person-name').textContent, document.getElementById('detail-person-name').textContent)" class="btn-action-primary btn-orange" style="width: auto; padding: 0 1.25rem;">
-        Report Sighting / Info
-      </button>
-    </div>
-  </div>
-</div>
-
-<script src="js/main.js"></script>
-<script src="js/navigation.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/photo-search.js"></script>
-
+  
 <footer class="site-footer">
   <div class="footer-container">
     
@@ -568,6 +452,124 @@
       });
   });
 </script>
+</main>
+</div>
+
+<!-- MODAL 1: REPORT INFORMATION / REQUEST OFFICIAL VERIFICATION -->
+<div id="report-info-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <h3 class="modal-title">Request Official Verification / Submit Sighting</h3>
+        <span id="report-info-candidate-name" style="font-size: 0.8rem; color: var(--gov-blue); font-weight: 700;"></span>
+      </div>
+      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
+    </div>
+    <form id="report-info-form" onsubmit="event.preventDefault(); window.closeAllModals(); alert('Thank you. Your verification request has been forwarded to Nepal Police & Red Cross.');">
+      <div class="modal-body">
+        <input type="hidden" id="report-info-candidate-id" />
+        <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 0.65rem 0.85rem; font-size: 0.75rem; color: #92400e; margin-bottom: 1rem;">
+          ⚠️ Verification requests trigger field dispatch and cross-matching with district hospitals and shelter rosters.
+        </div>
+        <div class="form-group" style="margin-bottom: 0.75rem;">
+          <label class="form-label">Your Name <span class="required">*</span></label>
+          <input type="text" class="form-input" placeholder="e.g. Suman Tamang" required />
+        </div>
+        <div class="form-group" style="margin-bottom: 0.75rem;">
+          <label class="form-label">Your Active Contact Phone <span class="required">*</span></label>
+          <input type="tel" class="form-input" placeholder="e.g. 9841234567" required />
+        </div>
+        <div class="form-group" style="margin-bottom: 0.75rem;">
+          <label class="form-label">Verification Details / Sighting Location <span class="required">*</span></label>
+          <textarea class="form-textarea" rows="3" placeholder="Describe where and when you saw this person, their condition, or reason for requesting verification..." required></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Cancel</button>
+        <button type="submit" class="btn-action-primary btn-orange" style="width: auto; padding: 0 1.25rem;">Submit for Verification</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL 2: REPORT MISMATCH (FALSE POSITIVE FLAG) -->
+<div id="report-mismatch-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <h3 class="modal-title">Flag Incorrect Candidate Match</h3>
+        <span style="font-size: 0.78rem; color: var(--text-subtle);">Report a false positive to improve safety algorithms</span>
+      </div>
+      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
+    </div>
+    <form id="report-mismatch-form" onsubmit="event.preventDefault(); window.closeAllModals(); alert('Thank you. Mismatch flag recorded for calibration.');">
+      <div class="modal-body">
+        <input type="hidden" id="mismatch-candidate-id" />
+        <div class="form-group" style="margin-bottom: 0.75rem;">
+          <label class="form-label">Reason for Flagging <span class="required">*</span></label>
+          <select class="form-select" required>
+            <option value="wrong_person">Distinct physical facial differences</option>
+            <option value="different_age">Completely different age group</option>
+            <option value="already_reunited">Individual has already reunited with family</option>
+            <option value="other">Other reason</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Additional Observations (Optional)</label>
+          <textarea class="form-textarea" rows="2" placeholder="Provide any clarifying details to help verification desks..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Cancel</button>
+        <button type="submit" class="btn-action-primary btn-blue" style="width: auto; padding: 0 1.25rem;">Submit Feedback</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL 3: PERSON DETAILS MODAL -->
+<div id="person-detail-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <h3 id="detail-person-name" class="modal-title">Official Record</h3>
+        <span id="detail-person-status" class="badge-missing">Missing</span>
+      </div>
+      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+        <img id="detail-person-img" src="" alt="Person" style="width: 88px; height: 88px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border-medium);" />
+        <div>
+          <div id="detail-person-meta" style="font-weight: 700; font-size: 0.9rem; color: var(--primary-navy);"></div>
+          <div id="detail-person-loc" style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;"></div>
+          <div id="detail-person-date" style="font-size: 0.75rem; color: var(--text-subtle); margin-top: 0.2rem;"></div>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom: 0.75rem;">
+        <label class="form-label">Description & Physical Marks</label>
+        <div id="detail-person-desc" style="font-size: 0.82rem; color: var(--text-main); background: var(--bg-subtle); padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); line-height: 1.45;"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Contact / Verification Channel</label>
+        <div id="detail-person-contact" style="font-size: 0.82rem; color: var(--text-main); background: var(--bg-subtle); padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);"></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Close</button>
+      <button type="button" onclick="window.closeAllModals(); window.openReportInfoModal(document.getElementById('detail-person-name').textContent, document.getElementById('detail-person-name').textContent)" class="btn-action-primary btn-orange" style="width: auto; padding: 0 1.25rem;">
+        Report Sighting / Info
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/photo-search.js"></script>
+
+
 
 </body>
 </html>

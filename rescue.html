@@ -197,56 +197,7 @@
       </div>
 
     </div>
-  </main>
-</div>
-
-<!-- Modal: Rescue SOS Dispatch -->
-<div id="rescue-request-modal" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-header">
-      <h3 class="modal-title" style="color: var(--emergency-red);">🚨 Emergency SOS Rescue Dispatch</h3>
-      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
-    </div>
-    <form id="rescue-form">
-      <div class="modal-body">
-        <div class="form-group">
-          <label class="form-label">Full Name <span class="required">*</span></label>
-          <input type="text" id="rescue-name" class="form-input" placeholder="Name of person reporting or trapped" required />
-        </div>
-        <div class="form-row-2">
-          <div class="form-group">
-            <label class="form-label">Contact Phone <span class="required">*</span></label>
-            <input type="tel" id="rescue-phone" class="form-input" placeholder="e.g. 9841234567" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Trapped Persons Count</label>
-            <input type="number" id="rescue-count" class="form-input" value="1" min="1" max="500" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Specific Location in Rasuwa <span class="required">*</span></label>
-          <input type="text" id="rescue-location" class="form-input" placeholder="e.g. Near Timure customs yard, 3rd house by river" required />
-        </div>
-        <div class="form-group">
-          <label class="form-label">Situation / Immediate Medical Risk</label>
-          <textarea id="rescue-desc" class="form-textarea" rows="3" placeholder="Describe water level, injuries, accessible approach points..."></textarea>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Cancel</button>
-        <button type="submit" class="btn-action-primary btn-orange" style="background: var(--emergency-red); width: auto; padding: 0 1.5rem;">
-          Dispatch SOS to Operations Room
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<script src="js/main.js"></script>
-<script src="js/navigation.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/rescue.js"></script>
-
+  
 <footer class="site-footer">
   <div class="footer-container">
     
@@ -438,6 +389,57 @@
       });
   });
 </script>
+</main>
+</div>
+
+<!-- Modal: Rescue SOS Dispatch -->
+<div id="rescue-request-modal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 class="modal-title" style="color: var(--emergency-red);">🚨 Emergency SOS Rescue Dispatch</h3>
+      <button class="modal-close-btn" onclick="window.closeAllModals()">✕</button>
+    </div>
+    <form id="rescue-form">
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Full Name <span class="required">*</span></label>
+          <input type="text" id="rescue-name" class="form-input" placeholder="Name of person reporting or trapped" required />
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label">Contact Phone <span class="required">*</span></label>
+            <input type="tel" id="rescue-phone" class="form-input" placeholder="e.g. 9841234567" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Trapped Persons Count</label>
+            <input type="number" id="rescue-count" class="form-input" value="1" min="1" max="500" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Specific Location in Rasuwa <span class="required">*</span></label>
+          <input type="text" id="rescue-location" class="form-input" placeholder="e.g. Near Timure customs yard, 3rd house by river" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Situation / Immediate Medical Risk</label>
+          <textarea id="rescue-desc" class="form-textarea" rows="3" placeholder="Describe water level, injuries, accessible approach points..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" onclick="window.closeAllModals()">Cancel</button>
+        <button type="submit" class="btn-action-primary btn-orange" style="background: var(--emergency-red); width: auto; padding: 0 1.5rem;">
+          Dispatch SOS to Operations Room
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/rescue.js"></script>
+
+
 
 </body>
 </html>
